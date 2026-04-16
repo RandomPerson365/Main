@@ -1,15 +1,114 @@
-// Importing necessary dependencies
-import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
+import { Phone, Mail, MessageCircle, Clock } from 'lucide-react';
+import { Navbar } from '@/components/Navbar';
+import { Footer } from '@/components/Footer';
+import { Button } from '@/components/ui/button';
 
-// Example Component
-const ExampleComponent = () => {
-  return (
-    <div className="container">
-      <h1 className="title">Welcome to the app!</h1>
-      <p className="description">This is an example component.</p>
-      <ArrowRight className="icon" />
-    </div>
-  );
+export const metadata = {
+  title: 'Contact | SiteGrow India',
+  description: 'Talk to us about your cafe, restaurant, or hotel website project.',
 };
 
-export default ExampleComponent;
+const faqs = [
+  {
+    q: 'What do you need from me to start?',
+    a: 'Your business name, menu/room details, logo (if available), photos, and your preferred launch date.',
+  },
+  {
+    q: 'Can you help if I already have a website?',
+    a: 'Yes. We can improve your current website or rebuild it if needed without losing your business identity.',
+  },
+  {
+    q: 'Do you offer post-launch support?',
+    a: 'Yes. We offer support plans for updates, bug fixes, and performance checks.',
+  },
+];
+
+export default function ContactPage() {
+  return (
+    <main className="min-h-screen bg-background">
+      <Navbar />
+
+      <section className="py-20 sm:py-24">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">Let’s discuss your business goals</h1>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              We keep this simple: tell us what you want to improve, and we will suggest the best website plan for your cafe or hotel.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="rounded-xl border border-border bg-card p-8">
+              <h2 className="text-2xl font-semibold text-foreground mb-4">Quick contact options</h2>
+              <div className="space-y-4 text-sm">
+                <div className="flex items-start">
+                  <Phone size={18} className="text-primary mr-3 mt-0.5" />
+                  <div>
+                    <p className="font-medium text-foreground">Call us</p>
+                    <p className="text-muted-foreground">+91 98765 43210</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <Mail size={18} className="text-primary mr-3 mt-0.5" />
+                  <div>
+                    <p className="font-medium text-foreground">Email</p>
+                    <p className="text-muted-foreground">hello@sitegrow.in</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <MessageCircle size={18} className="text-primary mr-3 mt-0.5" />
+                  <div>
+                    <p className="font-medium text-foreground">WhatsApp</p>
+                    <p className="text-muted-foreground">Message us for a faster response</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <Clock size={18} className="text-primary mr-3 mt-0.5" />
+                  <div>
+                    <p className="font-medium text-foreground">Working hours</p>
+                    <p className="text-muted-foreground">Mon-Sat, 10:00 AM to 7:00 PM IST</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-xl border border-border bg-card p-8">
+              <h2 className="text-2xl font-semibold text-foreground mb-4">What happens next?</h2>
+              <ol className="space-y-4 text-sm text-foreground list-decimal list-inside">
+                <li>15-minute discovery call to understand your business.</li>
+                <li>We recommend the right package and timeline.</li>
+                <li>You approve content and design direction.</li>
+                <li>We build, launch, and support your website.</li>
+              </ol>
+              <div className="mt-8 flex flex-col sm:flex-row gap-3">
+                <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                  <Link href="mailto:hello@sitegrow.in">Email us now</Link>
+                </Button>
+                <Button asChild variant="outline">
+                  <Link href="/pricing">View pricing plans</Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-muted/30">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-6 text-center">Common questions from owners</h2>
+          <div className="space-y-4">
+            {faqs.map((item) => (
+              <div key={item.q} className="rounded-lg border border-border bg-card p-5">
+                <h3 className="font-semibold text-foreground mb-2">{item.q}</h3>
+                <p className="text-sm text-muted-foreground">{item.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+  );
+}
