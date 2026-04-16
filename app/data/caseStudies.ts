@@ -2,7 +2,6 @@ export type CaseStudy = {
   id: string;
   title: string;
   category: string;
-  client: string;
   description: string;
   challenge: string;
   solution: string;
@@ -18,7 +17,6 @@ export const caseStudies: CaseStudy[] = [
     id: 'cafe-online-orders',
     title: 'The Daily Brew Cafe, Bengaluru',
     category: 'Cafe',
-    client: 'The Daily Brew Cafe',
     description: 'Independent cafe needed online ordering and better local visibility.',
     challenge: 'The cafe relied only on walk-ins and calls. Peak hour phone calls were missed and repeat customers had no easy way to reorder.',
     solution: 'We built a fast mobile website with menu, WhatsApp ordering, and prepaid pickup flow linked to Google Maps.',
@@ -44,7 +42,6 @@ export const caseStudies: CaseStudy[] = [
     id: 'hotel-direct-bookings',
     title: 'Lakeview Stay, Udaipur',
     category: 'Hotel',
-    client: 'Lakeview Stay',
     description: 'Boutique hotel wanted more direct bookings and fewer OTA commissions.',
     challenge: 'Most bookings came from aggregator apps, reducing margins and limiting guest communication before arrival.',
     solution: 'We launched a clean room showcase site with instant booking requests, payment links, and automated confirmation emails.',
@@ -70,7 +67,6 @@ export const caseStudies: CaseStudy[] = [
     id: 'restaurant-reservations',
     title: 'Spice Court, Mumbai',
     category: 'Restaurant',
-    client: 'Spice Court',
     description: 'Busy family restaurant needed reservations and weekend crowd control.',
     challenge: 'Hosts managed bookings manually on paper and WhatsApp, causing missed bookings and overbooking.',
     solution: 'We set up table booking slots, auto-confirmations, and a simple staff dashboard for daily reservation management.',

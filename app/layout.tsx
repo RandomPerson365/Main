@@ -3,7 +3,7 @@ import { Analytics } from '@vercel/analytics/next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'SiteGrow India | Websites for Cafés & Hotels',
+  title: 'SiteGrow India | Websites for Cafes & Hotels',
   description:
     'Professional websites, online ordering, and booking systems for cafe, restaurant, and hotel owners in India.',
   generator: 'v0.app',
