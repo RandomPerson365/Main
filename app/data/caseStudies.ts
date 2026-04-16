@@ -20,7 +20,7 @@ export const caseStudies: CaseStudy[] = [
     description: 'Independent cafe needed online ordering and better local visibility.',
     challenge: 'The cafe relied only on walk-ins and calls. Peak hour phone calls were missed and repeat customers had no easy way to reorder.',
     solution: 'We built a fast mobile website with menu, WhatsApp ordering, and prepaid pickup flow linked to Google Maps.',
-    result: 'Online orders became a consistent revenue channel within 8 weeks.',
+    result: 'Online orders became a consistent revenue channel within 8 weeks of launch.',
     image: '☕',
     metrics: [
       { label: 'Online orders', value: '+172%' },

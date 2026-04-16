@@ -38,7 +38,7 @@ export function Footer() {
             <h4 className="font-semibold text-foreground mb-3">Get in touch</h4>
             <div className="space-y-2 text-sm text-muted-foreground">
               <p>hello@sitegrow.in</p>
-              <p>+91 98765 43210</p>
+              <p>Phone support shared during onboarding</p>
               <p>Bengaluru, India</p>
             </div>
           </div>

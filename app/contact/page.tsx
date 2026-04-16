@@ -46,7 +46,7 @@ export default function ContactPage() {
                   <Phone size={18} className="text-primary mr-3 mt-0.5" />
                   <div>
                     <p className="font-medium text-foreground">Call us</p>
-                    <p className="text-muted-foreground">+91 98765 43210</p>
+                    <p className="text-muted-foreground">Phone support available after your first consultation call</p>
                   </div>
                 </div>
                 <div className="flex items-start">
