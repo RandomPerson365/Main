@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Activity, Cpu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
@@ -19,224 +19,160 @@ const caseStudies: Record<
   }
 > = {
   'cafe-modernization': {
-    title: 'The Cozy Cup - Digital Transformation',
+    title: 'CyberChai - Digital Transformation',
     category: 'Cafe',
-    client: 'The Cozy Cup Cafe',
+    client: 'CyberChai Technologies',
     challenge:
-      'The Cozy Cup was a beloved local cafe with loyal customers, but they were struggling to compete with larger chains that had strong online presences. They had no website, no online ordering system, and were missing out on customers who wanted to check their menu and hours online. Their word-of-mouth marketing was no longer enough.',
+      'CyberChai was a high-traffic tech-park cafe struggling with extreme peak-hour loads. Their physical queues were turning away developers on short breaks, and their existing POS could not handle mobile pre-orders efficiently.',
     solution:
-      'We created a modern, mobile-friendly website showcasing their menu, atmosphere, and story. We integrated an online ordering system that connects to their point-of-sale, allowing customers to order and pay online for pickup. We also set up a reservation system for their seating area and integrated their Instagram feed to showcase the cafe vibrancy.',
+      'We deployed a hyper-speed web progressive app (PWA) allowing zero-latency ordering. Integrated directly with a custom backend queueing algorithm that predicts wait times and syncs with their kitchen displays in real-time.',
     results: [
       {
         label: '+185%',
         value: '+185%',
-        description: 'Increase in online orders within the first 3 months',
+        description: 'Increase in mobile pre-orders',
       },
       {
-        label: '+$8,500',
-        value: '+$8,500',
-        description: 'Average monthly revenue increase from online orders',
+        label: '+₹7,50K',
+        value: '+₹7.5L',
+        description: 'Monthly revenue baseline increase',
       },
       {
-        label: '95%',
-        value: '95%',
-        description: 'Mobile traffic from their website',
+        label: 'Sub-second',
+        value: '<1s',
+        description: 'API response times under peak load',
       },
       {
         label: '2,100',
         value: '2,100',
-        description: 'New followers gained on social media',
+        description: 'Active users onboarded in week 1',
       },
     ],
-    services: ['Website Design', 'E-commerce Integration', 'Mobile Optimization', 'Social Media Setup'],
+    services: ['PWA Development', 'Real-time Queuing Backend', 'Payment Gateway Integration'],
     testimonial: {
-      text: 'Serverstack completely transformed our business. Having an online presence has been game-changing. Our customers love the convenience, and we love the increased revenue. The team was responsive and really understood what we needed.',
-      author: 'Maria Santos',
-      role: 'Owner, The Cozy Cup Cafe',
+      text: 'Serverstack executed our digital transition flawlessly. The interface is stunning and the backend handles our peak load effortlessly. Outstanding tech.',
+      author: 'Aarav Sharma',
+      role: 'Founder, CyberChai',
     },
-    fullDescription: `The Cozy Cup is a charming independent cafe in the heart of downtown. With excellent coffee, pastries, and a warm atmosphere, they had built a loyal following through word-of-mouth. However, as the competitive landscape shifted and more customers expected businesses to have an online presence, The Cozy Cup was falling behind.
+    fullDescription: `CyberChai is a tech-focused modern cafe located in the heart of Bengaluru's prime IT corridor.
+    
+## Mission Parameters
 
-They came to us with a clear goal: establish a strong online presence that would help them attract new customers while better serving their existing ones.
+The core objective was eliminating queue friction during peak hours (1 PM - 3 PM) without disrupting kitchen workflow.
 
-## The Challenge
+## System Architecture
 
-The Cozy Cup faced several challenges:
-- No website or online visibility
-- No way for customers to order ahead
-- Unable to showcase their menu and special offerings
-- Missing out on customers searching for cafes online
-- Unable to capitalize on their social media presence
+1. **Frontend**: Next.js deployed on Vercel edge networks for sub-100ms apparent load times.
+2. **Backend Engine**: A custom Node.js queueing system that calculates dynamic prep times based on current load, updating users in real-time via WebSockets.
+3. **Payment Integrity**: Deep integration with Razorpay for instant UPI authentication and auto-reconciliation.
 
-## Our Approach
+## Deployment Outcome
 
-We developed a comprehensive digital strategy that included:
-
-1. **Website Design** - A beautiful, modern website that captures the warmth and character of the cafe while being fully optimized for mobile.
-
-2. **Online Ordering System** - Integration with their point-of-sale system to allow customers to order and pay online for pickup, reducing wait times and improving efficiency.
-
-3. **Reservation System** - A booking system for their seating area, perfect for groups or customers wanting to ensure they have a table.
-
-4. **Social Media Integration** - Automatic Instagram feed display on the website, keeping content fresh and encouraging social media engagement.
-
-5. **Menu Management** - Easy-to-update menu system so they can quickly showcase new items and daily specials.
-
-## The Results
-
-The impact was immediate and significant:
-- Online orders started coming in within the first week
-- By month 3, online orders represented 25% of their daily revenue
-- Website traffic grew to 2,000+ monthly visitors
-- Social media engagement increased dramatically
-- Customer base expanded beyond their immediate neighborhood
-
-The website has become not just a sales tool, but an essential part of their brand presence. It's helped them stay competitive while maintaining their independent, personal touch.`,
+The system went live with zero downtime. Order processing efficiency increased radically, shifting 70% of peak traffic to the mobile portal and dissolving physical queues entirely.`,
   },
   'hotel-booking': {
-    title: 'Sunset Haven Hotel - Booking Revolution',
+    title: 'Neon Oasis Resort - Booking Platform',
     category: 'Hotel',
-    client: 'Sunset Haven Hotel',
+    client: 'Neon Oasis Luxury Resorts',
     challenge:
-      'A beautiful boutique hotel with premium accommodations was losing bookings because their outdated website didn&apos;t reflect the quality of their property. Customers preferred booking through third-party platforms like Booking.com and Airbnb, where they had to pay significant commissions.',
+      'A premium boutique resort losing 18% margins to aggregators (OTAs) due to an underperforming direct booking portal that lacked modern UX and speed.',
     solution:
-      'We designed and built a stunning hotel website with an integrated booking engine. The site showcases each room with high-quality photos and detailed descriptions. The booking system connects directly to their property management system, allowing real-time availability updates and direct bookings.',
+      'Engineered a high-conversion booking engine with secure payment rails and a real-time availability sync algorithm to prevent double-bookings across networks.',
     results: [
       {
         label: '+220%',
         value: '+220%',
-        description: 'Increase in direct bookings (excluding third-party platforms)',
+        description: 'Surge in direct booking ratios',
       },
       {
         label: '89%',
         value: '89%',
-        description: 'Average occupancy rate (up from 62%)',
+        description: 'Sustained occupancy rate',
       },
       {
-        label: '$24,000',
-        value: '$24,000',
-        description: 'Commission savings per month',
+        label: '₹18 Lakh',
+        value: '₹18L',
+        description: 'Monthly aggregator commission saved',
       },
       {
-        label: '4.9/5',
-        value: '4.9/5',
-        description: 'Average guest review rating',
+        label: '0 MS',
+        value: 'Zero',
+        description: 'Double-booking conflicts post-launch',
       },
     ],
-    services: ['Hotel Website Design', 'Booking Engine Integration', 'Payment Processing', 'Property Management Integration'],
+    services: ['Booking Engine Arch', 'Secure Payment Rails', 'PMS API Sync'],
     testimonial: {
-      text: 'The new website has transformed our business. Direct bookings have skyrocketed, and we&apos;re no longer overly dependent on third-party platforms. The booking system is seamless for our guests and has reduced our administrative work significantly.',
-      author: 'James Mitchell',
-      role: 'Manager, Sunset Haven Hotel',
+      text: "Precision engineering and visionary design. They didn't just build a website; they constructed our primary revenue engine. Incredible ROI.",
+      author: 'Priya Patel',
+      role: 'Director, Neon Oasis Resort',
     },
-    fullDescription: `Sunset Haven Hotel is a 25-room luxury boutique hotel located in a scenic coastal area. Despite having beautiful accommodations and excellent service, they were struggling with their online presence and booking strategy.
+    fullDescription: `Neon Oasis is a flagship 40-key boutique lifestyle resort targeting high-net-worth tech millennials in Pune.
 
-## The Challenge
+## Mission Parameters
 
-Hotel guests today expect to be able to:
-- See high-quality photos of rooms before booking
-- Read detailed room descriptions and amenities
-- Book directly with confidence
-- Check real-time availability
+Intercept traffic currently booking through OTAs by aggressively optimizing the direct booking UX and reliability.
 
-Sunset Haven's old website lacked all of this, so guests were booking through third-party platforms like Booking.com. While this increased visibility, the hotel was paying 15-18% in commissions per booking.
+## System Architecture
 
-## Our Solution
+1. **Conversion-Optimized UX**: Glassmorphic interfaces focusing intense attention purely on availability and action buttons. 
+2. **The Sync Engine**: A custom microservice constantly polling and locking inventory between their PMS and the web UI within milliseconds.
+3. **Analytics Telemetry**: Deep funnel tracking to identify drop-off nodes and retarget via automated protocols.
 
-We created a complete hotel digital ecosystem:
+## Deployment Outcome
 
-1. **Professional Website** - A gorgeous website that showcases the hotel's unique character and each room type with professional photography and detailed descriptions.
-
-2. **Direct Booking Engine** - Integration of a powerful booking system that updates in real-time with their property management system.
-
-3. **Mobile Optimization** - 70% of bookings come from mobile devices, so we optimized every aspect for smartphones and tablets.
-
-4. **Guest Reviews** - Built-in system for collecting and displaying guest reviews, building trust with potential guests.
-
-5. **Special Packages** - Ability to create and promote special packages and seasonal rates directly on the website.
-
-## The Impact
-
-The direct booking strategy has been highly successful:
-- Direct bookings increased by 220% in the first year
-- Monthly commission savings exceed $24,000
-- Occupancy rate improved from 62% to 89%
-- Guest satisfaction scores increased
-- Staff efficiency improved with automated booking confirmations
-
-The hotel has reduced its dependence on third-party platforms while improving both revenue and guest satisfaction.`,
+Within 60 days of initialization, direct traffic converted at 3x the legacy rate, radically altering the resort's unit economics and margin structure.`,
   },
   'restaurant-launch': {
-    title: 'Bistro Rouge - Brand Launch',
+    title: 'Spice Circuit - Brand Launch',
     category: 'Restaurant',
-    client: 'Bistro Rouge',
+    client: 'Spice Circuit Dining',
     challenge:
-      'A new upscale French restaurant was launching in a competitive market with limited brand awareness. They needed to establish a professional presence, generate buzz, and secure reservations before opening day.',
+      'A highly anticipated fusion restaurant in Mumbai needed to generate massive waitlists pre-launch to guarantee capitalization upon opening.',
     solution:
-      'We developed a complete brand identity and digital presence. This included a sophisticated website with reservation integration, logo design, social media strategy, and a pre-launch marketing campaign that built anticipation among the target audience.',
+      'Deployed an aggressive pre-launch digital infrastructure including a viral waitlist algorithm, dynamic table reservation system, and highly stylized landing sequence.',
     results: [
       {
-        label: '45+',
-        value: '45+',
-        description: 'Reservation requests on opening day',
+        label: '450+',
+        value: '450+',
+        description: 'Reservation lock-ins pre-launch',
       },
       {
-        label: '2,400',
-        value: '2,400',
-        description: 'Social media followers before opening',
+        label: '25K',
+        value: '25,000',
+        description: 'Captured leads in database',
       },
       {
-        label: '300%',
-        value: '300%',
-        description: 'Website traffic growth in first month',
+        label: '100%',
+        value: '100%',
+        description: 'Server uptime during viral spikes',
       },
       {
-        label: '4.8/5',
-        value: '4.8/5',
-        description: 'Average rating on Google and Yelp',
+        label: '₹22 Lakh',
+        value: '₹22L',
+        description: 'Opening week revenue processed',
       },
     ],
-    services: ['Branding', 'Website Design', 'Reservation System', 'Social Media Strategy'],
+    services: ['Viral Waitlist Logic', 'Reservation API', 'Cloudflare Scale Arch'],
     testimonial: {
-      text: 'From concept to opening day, Serverstack handled everything. Their design made our restaurant look premium and prestigious. We had a waiting list on opening night thanks to their marketing strategy. Best investment we made.',
-      author: 'Sophie Laurent',
-      role: 'Chef & Owner, Bistro Rouge',
+      text: 'From zero to full digital presence in record time. The analytics dashboard they built gives us real-time insights into customer preferences.',
+      author: 'Rahul Verma',
+      role: 'Head Chef, Spice Circuit',
     },
-    fullDescription: `Bistro Rouge is an upscale French restaurant launched by Chef Sophie Laurent, a classically trained chef with experience in Parisian fine dining establishments.
+    fullDescription: `Spice Circuit combined molecular gastronomy with traditional Indian street food, demanding an equally disruptive digital launch.
 
-## The Challenge
+## Mission Parameters
 
-Opening a new restaurant is challenging:
-- Need to build brand awareness in a crowded market
-- Need to establish credibility and positioning
-- Need to generate reservations before opening
-- Need a strong online presence to compete with established restaurants
+Capture maximum organic hype and convert it into locked reservations without server instability during viral influencer spikes.
 
-Bistro Rouge had limited marketing budget and needed to be strategic about every dollar spent.
+## System Architecture
 
-## Our Strategy
+1. **Edge Caching**: Fully static, edge-cached frontend capable of absorbing massive sudden traffic surges without degrading load times.
+2. **Reservation Core**: Custom API managing complex table turning logic, deposits, and dynamic pricing based on demand urgency.
+3. **Viral Loop Protocol**: Built-in referral mechanics incentivizing users to share their reservation status for priority seating.
 
-We created a cohesive brand and digital presence:
+## Deployment Outcome
 
-1. **Brand Development** - Logo, color palette, brand guidelines that communicate luxury and French elegance.
-
-2. **Website Design** - A sophisticated website that reflects the upscale nature of the restaurant. Integrated OpenTable reservation system for easy booking.
-
-3. **Pre-Launch Campaign** - Social media strategy and content calendar that built anticipation before opening.
-
-4. **Grand Opening** - Coordinated launch campaign with media outreach and special promotions.
-
-5. **Ongoing Social Media** - Monthly content strategy showcasing dishes, chef highlights, and special events.
-
-## The Results
-
-The coordinated approach was highly effective:
-- Pre-launch social media campaign reached 15,000+ people
-- Website traffic exceeded expectations
-- Opening day had 45+ reservations and a waiting list
-- Strong Google and Yelp reviews from day one
-- Social media community continues to grow
-
-The restaurant has become the go-to fine dining destination in the area.`,
+The servers flawlessly handled a 50x traffic spike when local influencers posted. Opening week was fully booked 14 days in advance.`,
   },
 };
 
@@ -247,12 +183,17 @@ export default function CaseStudyDetail({ params }: { params: { id: string } }) 
     return (
       <main className="min-h-screen bg-background">
         <Navbar />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
-          <h1 className="text-3xl font-bold text-foreground mb-4">Case Study Not Found</h1>
-          <p className="text-muted-foreground mb-8">The case study you&apos;re looking for doesn&apos;t exist.</p>
-          <Button asChild>
-            <Link href="/portfolio">Back to Portfolio</Link>
-          </Button>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center relative">
+          <div className="absolute inset-0 bg-grid opacity-10 pointer-events-none" />
+          <div className="relative z-10 glass-card max-w-2xl mx-auto p-12 border-destructive/30">
+            <h1 className="text-3xl font-bold font-mono text-destructive mb-4 tracking-widest uppercase animate-pulse">404 // File Not Found</h1>
+            <p className="text-muted-foreground mb-8 text-sm font-mono">
+              The requested data node does not exist in the current directory.
+            </p>
+            <Button asChild variant="outline" className="border-secondary text-secondary hover:bg-secondary/10">
+              <Link href="/portfolio">Abort and Return to Portfolio</Link>
+            </Button>
+          </div>
         </div>
         <Footer />
       </main>
@@ -260,90 +201,115 @@ export default function CaseStudyDetail({ params }: { params: { id: string } }) 
   }
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background selection:bg-primary/30 selection:text-primary">
       <Navbar />
 
       {/* Hero */}
-      <section className="relative overflow-hidden py-12 sm:py-20 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link href="/portfolio" className="inline-flex items-center text-primary hover:text-secondary mb-6">
-            <ArrowLeft size={18} className="mr-2" />
-            Back to Portfolio
+      <section className="relative py-24 sm:py-32 border-b border-border/30 overflow-hidden">
+        <div className="absolute inset-0 bg-dots opacity-20 pointer-events-none" />
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent pointer-events-none" />
+        <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-primary/10 blur-[100px] rounded-full pointer-events-none animate-glow-pulse" />
+        
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <Link href="/portfolio" className="inline-flex items-center text-xs font-mono text-primary hover:text-secondary mb-10 transition-colors uppercase tracking-widest bg-primary/10 px-4 py-2 rounded-full border border-primary/20 hover:border-secondary/50">
+            <ArrowLeft size={14} className="mr-3" />
+            Return to Core Database
           </Link>
-          <div className="mb-4">
-            <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full">
-              {caseStudy.category}
+          
+          <div className="mb-6 flex items-center space-x-4 animate-fade-in-up">
+            <span className="inline-block px-4 py-1.5 glass-card border-secondary/30 text-secondary text-xs uppercase tracking-widest font-mono rounded-full font-semibold shadow-[0_0_15px_oklch(0.7 0.18 195 / 0.2)]">
+              Class: {caseStudy.category}
+            </span>
+            <span className="flex items-center text-xs font-mono text-muted-foreground">
+              <Activity size={14} className="mr-2 text-primary" /> System Online
             </span>
           </div>
-          <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6 text-balance">
+          
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance tracking-tight animate-fade-in-up delay-100">
             {caseStudy.title}
           </h1>
-          <p className="text-lg text-muted-foreground">Client: {caseStudy.client}</p>
+          
+          <div className="flex items-center space-x-4 animate-fade-in-up delay-200">
+            <p className="text-lg text-muted-foreground border-l-2 border-primary pl-4">
+              <span className="text-xs uppercase tracking-widest font-mono block mb-1">Entity Alias</span>
+              <span className="font-semibold text-foreground">{caseStudy.client}</span>
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Content */}
-      <section className="py-20 sm:py-32">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 sm:py-32 relative">
+        <div className="absolute top-0 right-0 w-full h-full bg-radial-glow opacity-30 pointer-events-none" />
+        
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Challenge & Solution */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-            <div>
-              <h2 className="text-2xl font-bold text-foreground mb-4">The Challenge</h2>
-              <p className="text-muted-foreground">{caseStudy.challenge}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
+            <div className="glass-card p-8 rounded-2xl animate-slide-left">
+              <h2 className="text-xs uppercase tracking-widest font-mono text-destructive mb-4 flex items-center">
+                <span className="w-2 h-2 rounded-full bg-destructive animate-pulse mr-3" />
+                Identified Anomalies
+              </h2>
+              <p className="text-muted-foreground leading-relaxed">{caseStudy.challenge}</p>
             </div>
-            <div>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Our Solution</h2>
-              <p className="text-muted-foreground">{caseStudy.solution}</p>
+            <div className="glass-card border-primary/40 p-8 rounded-2xl shadow-[0_0_30px_oklch(0.72_0.19_195/0.1)] relative overflow-hidden animate-slide-right">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 blur-[40px] rounded-full" />
+              <h2 className="text-xs uppercase tracking-widest font-mono text-primary mb-4 flex items-center relative z-10">
+                <Cpu size={14} className="mr-3" />
+                Deployed Resolution
+              </h2>
+              <p className="text-foreground leading-relaxed relative z-10">{caseStudy.solution}</p>
             </div>
           </div>
 
-          {/* Results */}
-          <div className="mb-16">
-            <h2 className="text-2xl font-bold text-foreground mb-8">Results</h2>
+          {/* Results Grid */}
+          <div className="mb-24 animate-fade-in-up pt-12 border-t border-border/30 relative">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-[1px] bg-gradient-to-r from-transparent via-primary to-transparent" />
+            <h2 className="text-2xl font-bold text-foreground mb-10 tracking-tight font-mono text-center">Verified Impact Telemetry</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {caseStudy.results.map((result, i) => (
-                <div key={i} className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-lg p-6 border border-border">
-                  <p className="text-3xl font-bold text-primary mb-2">{result.value}</p>
-                  <p className="text-sm text-muted-foreground">{result.description}</p>
+                <div key={i} className="glass-card rounded-2xl p-8 border-t-2 border-t-primary/50 text-center hover:-translate-y-2 transition-transform duration-300 group">
+                  <p className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-primary to-secondary mb-3">{result.value}</p>
+                  <p className="text-xs text-muted-foreground font-mono uppercase tracking-widest leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">{result.description}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Full Description */}
-          <div className="prose prose-invert max-w-none mb-16">
-            <div className="text-foreground space-y-6">
+          {/* Full Description Segmented */}
+          <div className="mb-20 glass-card p-8 sm:p-12 rounded-3xl animate-fade-in-up">
+            <div className="prose prose-invert prose-lg max-w-none prose-headings:font-mono prose-headings:tracking-tight prose-headings:text-foreground prose-p:text-muted-foreground prose-li:text-muted-foreground">
               {caseStudy.fullDescription.split('\n\n').map((paragraph, i) => (
-                <div key={i}>
+                <div key={i} className="mb-6">
                   {paragraph.startsWith('##') ? (
-                    <h3 className="text-xl font-bold text-foreground mt-8 mb-4">
+                    <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mt-12 mb-6 uppercase tracking-widest border-b border-border/50 pb-4 inline-block">
                       {paragraph.replace('## ', '')}
                     </h3>
                   ) : paragraph.includes('-') && paragraph.split('\n').length > 1 ? (
-                    <ul className="space-y-2">
+                    <ul className="space-y-4 pl-0 list-none mt-4">
                       {paragraph.split('\n').map((item, j) => (
-                        <li key={j} className="flex items-start text-muted-foreground">
-                          <span className="text-primary mr-3">•</span>
-                          <span>{item.replace('- ', '')}</span>
+                        <li key={j} className="flex items-start bg-background/30 p-4 rounded-lg border border-border/20">
+                          <span className="text-secondary font-mono mr-4 mt-1 font-bold">{'>'}</span>
+                          <span className="text-foreground/90">{item.replace('- ', '')}</span>
                         </li>
                       ))}
                     </ul>
                   ) : (
-                    <p className="text-muted-foreground">{paragraph}</p>
+                    <p className="leading-relaxed">{paragraph}</p>
                   )}
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Services */}
-          <div className="mb-16">
-            <h2 className="text-2xl font-bold text-foreground mb-6">Services Provided</h2>
-            <div className="flex flex-wrap gap-3">
+          {/* Services Array */}
+          <div className="mb-24 text-center animate-fade-in-up">
+            <h2 className="text-xs font-mono tracking-widest uppercase text-muted-foreground mb-8">Utilized Tech Stack & Modules</h2>
+            <div className="flex flex-wrap gap-4 justify-center">
               {caseStudy.services.map((service, i) => (
                 <span
                   key={i}
-                  className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold"
+                  className="px-6 py-3 glass-card border-primary/20 text-foreground rounded-full text-sm font-mono tracking-wide shadow-[0_0_10px_oklch(0.72_0.19_195/0.1)] hover:border-primary/50 transition-colors cursor-default"
                 >
                   {service}
                 </span>
@@ -351,46 +317,25 @@ export default function CaseStudyDetail({ params }: { params: { id: string } }) 
             </div>
           </div>
 
-          {/* Testimonial */}
-          <div className="bg-gradient-to-r from-primary to-secondary text-primary-foreground rounded-lg p-8 mb-16">
-            <blockquote className="text-lg mb-6">
-              &ldquo;{caseStudy.testimonial.text}&rdquo;
-            </blockquote>
-            <footer>
-              <p className="font-semibold">{caseStudy.testimonial.author}</p>
-              <p className="text-sm opacity-90">{caseStudy.testimonial.role}</p>
-            </footer>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-20 sm:py-32 bg-muted/30">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-lg text-muted-foreground mb-8">
-            Let&apos;s create your success story. Schedule a free consultation with our team.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              asChild
-              size="lg"
-              className="bg-gradient-to-r from-primary to-secondary text-white hover:opacity-90"
-            >
-              <Link href="/contact" className="flex items-center justify-center">
-                Start Your Project <ArrowRight size={20} className="ml-2" />
-              </Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-primary text-primary hover:bg-primary/5"
-            >
-              <Link href="/portfolio">View More Projects</Link>
-            </Button>
+          {/* Testimonial Panel */}
+          <div className="relative rounded-3xl p-[1px] bg-gradient-to-br from-primary via-primary/20 to-secondary animate-fade-in-up">
+            <div className="bg-background/90 backdrop-blur-2xl rounded-3xl p-10 sm:p-14 relative overflow-hidden">
+              <div className="absolute -top-10 -right-10 text-9xl font-serif text-primary/10 rotate-12">"</div>
+              
+              <blockquote className="text-xl sm:text-2xl mb-10 text-foreground leading-relaxed italic relative z-10 font-light">
+                &ldquo;{caseStudy.testimonial.text}&rdquo;
+              </blockquote>
+              
+              <footer className="flex items-center relative z-10 border-t border-border/50 pt-8">
+                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center font-bold text-xl mr-5 border border-primary/40 text-primary">
+                  {caseStudy.testimonial.author.charAt(0)}
+                </div>
+                <div>
+                  <p className="font-bold text-foreground tracking-wide font-mono">{caseStudy.testimonial.author}</p>
+                  <p className="text-xs text-secondary mt-1 font-mono tracking-widest uppercase">{caseStudy.testimonial.role}</p>
+                </div>
+              </footer>
+            </div>
           </div>
         </div>
       </section>

@@ -8,86 +8,86 @@ import { ServiceCard } from '@/components/ServiceCard';
 const fullServices = [
   {
     icon: <PenTool size={24} />,
-    title: 'Website Design & Development',
+    title: 'UI/UX Architecture',
     id: 'design',
-    description: 'Custom-built websites that showcase your business beautifully.',
+    description: 'Precision-crafted interfaces optimized for high-conversion user pathways.',
     details: [
-      'Responsive mobile-first design',
-      'Custom branding implementation',
-      'Fast loading speeds',
-      'SEO-friendly structure',
-      'User experience optimization',
-      'Modern design trends',
+      'Responsive mobile-first builds',
+      'Dynamic typography scaling',
+      'Glassmorphic & neo-brutalist trends',
+      'Lighthouse 90+ optimization',
+      'Micro-interaction design',
+      'Accessibility compliance',
     ],
     process: [
-      'Discovery & Strategy',
-      'Design & Mockups',
-      'Development',
-      'Testing & Launch',
-      'Post-Launch Support',
+      'Telemetry Analysis',
+      'Wireframing Nodes',
+      'Component Library Deploy',
+      'Beta Testing',
+      'Final Rollout',
     ],
   },
   {
     icon: <Code size={24} />,
-    title: 'Advanced Features',
+    title: 'Core Backend Logic',
     id: 'development',
-    description: 'Powerful functionality tailored to your business needs.',
+    description: 'Robust server-side engineering tailored for the Indian market scale.',
     details: [
-      'E-commerce platforms',
-      'Online booking systems',
-      'Payment integration',
-      'Customer management',
-      'Email automation',
-      'Integration with tools you use',
+      'UPI & Razorpay Integrations',
+      'High-throughput datastores',
+      'Serverless function deployment',
+      'Graph-based querying',
+      'Automated SMS/WhatsApp triggers',
+      'Legacy system APIs',
     ],
     process: [
-      'Requirements Analysis',
-      'Technical Architecture',
-      'Custom Development',
-      'Quality Assurance',
-      'Deployment',
+      'System Architecture Map',
+      'Database Modeling',
+      'Sprint Execution',
+      'Load Testing Simulation',
+      'Production Deploy',
     ],
   },
   {
     icon: <Wrench size={24} />,
-    title: 'Maintenance & Support',
+    title: 'System Ops & Sec',
     id: 'maintenance',
-    description: 'Keep your website running smoothly with ongoing support.',
+    description: '24/7 monitoring, security patching, and core updates.',
     details: [
-      'Regular security updates',
-      'Performance monitoring',
-      'Backup management',
-      'Content updates',
-      'Bug fixes & improvements',
-      'Priority support',
+      'Zero-day vulnerability scans',
+      'Cloudflare DDoS shielding',
+      'Automated DB snapshots',
+      'CDN packet routing',
+      'Memory leak resolving',
+      'SLA-backed uptime',
     ],
     process: [
-      'Monthly Health Checks',
-      'Security Updates',
-      'Performance Optimization',
-      'Content Management',
-      '24/7 Emergency Support',
+      'Threat Vector Analysis',
+      'Automated Patch Cycle',
+      'Latency Optimization',
+      'Content Sync',
+      'Red Alert Support',
     ],
   },
   {
     icon: <TrendingUp size={24} />,
-    title: 'SEO & Growth',
+    title: 'Growth Telemetry',
     id: 'seo',
-    description: 'Help customers find you with strategic SEO and marketing.',
+    description: 'Algorithmic tuning to dominate search engine indices.',
     details: [
-      'Local SEO optimization',
-      'Keyword research',
-      'Content strategy',
-      'Analytics setup',
-      'Conversion optimization',
-      'Monthly reporting',
+      'Hyper-local SEO (Pan-India)',
+      'Schema markup injection',
+      'Backlink network building',
+      'Core Web Vitals tuning',
+      'A/B split routing',
+      'Monthly data viz reports',
     ],
     process: [
-      'SEO Audit',
-      'Strategy Development',
-      'On-Page Optimization',
-      'Content Creation',
-      'Performance Tracking',
+      'Index Deep Scan',
+      'Keyword Vectoring',
+      'On-Page DOM Tuning',
+      'Content Generation API',
+      'Rank Tracking',
     ],
   },
 ];
@@ -95,114 +95,119 @@ const fullServices = [
 const industries = [
   {
     icon: '☕',
-    name: 'Cafes & Coffee Shops',
+    name: 'QSRs & Cloud Kitchens',
     benefits: [
-      'Online menu showcase',
-      'Loyalty programs',
-      'Order management',
-      'Social media integration',
+      'Zomato/Swiggy API hooks',
+      'QR automated menus',
+      'Waitlist algorithms',
+      'Loyalty point ledgers',
     ],
   },
   {
-    icon: '🏨',
-    name: 'Hotels & Accommodations',
+    icon: '🏢',
+    name: 'Tech Parks & Real Estate',
     benefits: [
-      'Booking system integration',
-      'Room showcase galleries',
-      'Guest management',
-      'Review management',
+      'Lead gen funnels',
+      '3D tour rendering',
+      'Inventory databases',
+      'CRM sync pipelines',
     ],
   },
   {
-    icon: '🍽️',
-    name: 'Restaurants',
+    icon: '🏥',
+    name: 'MedTech & Clinics',
     benefits: [
-      'Online reservations',
-      'Menu management',
-      'Delivery integration',
-      'Chef profiles & specials',
+      'Secure appointment tech',
+      'Tele-consult gateways',
+      'Patient record portals',
+      'Prescription APIs',
     ],
   },
   {
     icon: '🏪',
-    name: 'Retail Shops',
+    name: 'D2C Retail Brands',
     benefits: [
-      'E-commerce platform',
-      'Inventory management',
-      'Product showcase',
-      'Customer reviews',
+      'Headless commerce',
+      'Delhivery/Shiprocket sync',
+      'Cart recovery AI',
+      'Flash sale architectures',
     ],
   },
   {
-    icon: '💆',
-    name: 'Salons & Spas',
+    icon: '🏋️',
+    name: 'Fitness Networks',
     benefits: [
-      'Appointment booking',
-      'Staff profiles',
-      'Service catalogs',
-      'Reminder systems',
+      'Member portal logins',
+      'Trainer scheduling',
+      'Subscription billing engine',
+      'Progress tracking dashboards',
     ],
   },
   {
-    icon: '🎨',
-    name: 'Startups & New Businesses',
+    icon: '🚀',
+    name: 'SaaS Startups',
     benefits: [
-      'Brand establishment',
-      'Lead generation',
-      'Professional presence',
-      'Growth tracking',
+      'Product-led growth loops',
+      'Waitlist mechanics',
+      'Documentation hubs',
+      'Investor data rooms',
     ],
   },
 ];
 
 export const metadata = {
-  title: 'Services | Serverstack - Web Design & Development',
-  description: 'Professional web design, development, maintenance, and SEO services for cafes, hotels, and businesses.',
+  title: 'Services | Serverstack - Web Engineering',
+  description: 'Next-gen web development, system architecture, and tech ops for ambitious Indian companies.',
 };
 
 export default function Services() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background selection:bg-primary/30 selection:text-primary">
       <Navbar />
 
       {/* Hero */}
-      <section className="relative overflow-hidden py-20 sm:py-32 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance">
-            Complete Web Solutions{' '}
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              For Your Business
+      <section className="relative overflow-hidden py-24 sm:py-32">
+        <div className="absolute inset-0 bg-grid opacity-20 pointer-events-none" />
+        <div className="absolute -top-[20%] right-[-10%] w-[50%] h-[50%] bg-primary/20 blur-[120px] rounded-full pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <div className="inline-flex mb-6 animate-fade-in-up">
+            <span className="px-3 py-1 text-xs font-mono tracking-widest text-secondary border border-secondary/30 rounded-full bg-secondary/5">SERVICE PROTOCOLS</span>
+          </div>
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-foreground mb-6 text-balance tracking-tight animate-fade-in-up delay-100">
+            Digital Engineering <br className="hidden sm:block" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary bg-[length:200%_auto] animate-shimmer drop-shadow-sm">
+              Capabilities
             </span>
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            From initial design to ongoing support, we handle everything you need for a successful
-            online presence.
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-mono text-sm sm:text-base animate-fade-in-up delay-200">
+            // Full-stack solutions designed for extreme scalability, zero-downtime, and maximum conversion metrics in the Indian market.
           </p>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 sm:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-20">
+      <section className="py-20 sm:py-32 relative border-t border-border/30 bg-muted/20">
+        <div className="absolute inset-0 bg-dots opacity-30 pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="space-y-32">
             {fullServices.map((service, index) => (
-              <div key={index} id={service.id} className="scroll-mt-24">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+              <div key={index} id={service.id} className="scroll-mt-32 group/section">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                   {/* Content */}
-                  <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-                    <div className="inline-block p-3 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg mb-6">
+                  <div className={`lg:col-span-7 ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
+                    <div className="inline-block p-4 glass-card rounded-xl mb-6 shadow-[0_0_15px_oklch(0.72_0.19_195/0.1)] group-hover/section:shadow-[0_0_25px_oklch(0.72_0.19_195/0.3)] transition-all duration-500">
                       <div className="text-primary">{service.icon}</div>
                     </div>
-                    <h2 className="text-3xl font-bold text-foreground mb-4">{service.title}</h2>
-                    <p className="text-lg text-muted-foreground mb-8">{service.description}</p>
+                    <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4 font-mono tracking-tight">{service.title}</h2>
+                    <p className="text-lg text-muted-foreground mb-10 leading-relaxed">{service.description}</p>
 
-                    <div className="mb-8">
-                      <h3 className="font-semibold text-foreground mb-4">What You Get:</h3>
-                      <ul className="space-y-3">
+                    <div>
+                      <h3 className="text-xs font-mono tracking-widest uppercase text-secondary mb-6 border-l-2 border-secondary pl-3">Technical Outputs</h3>
+                      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {service.details.map((detail, i) => (
-                          <li key={i} className="flex items-start">
-                            <CheckCircle size={20} className="text-primary mr-3 mt-0.5 flex-shrink-0" />
-                            <span className="text-foreground">{detail}</span>
+                          <li key={i} className="flex items-start bg-background/50 p-3 rounded-lg border border-border/50 hover:border-primary/40 transition-colors">
+                            <CheckCircle size={18} className="text-primary mr-3 mt-0.5 flex-shrink-0" />
+                            <span className="text-sm font-medium text-foreground">{detail}</span>
                           </li>
                         ))}
                       </ul>
@@ -210,20 +215,23 @@ export default function Services() {
                   </div>
 
                   {/* Process */}
-                  <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-                    <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-xl p-8 border border-border">
-                      <h3 className="font-semibold text-foreground mb-6">Our Process</h3>
-                      <div className="space-y-4">
+                  <div className={`lg:col-span-5 ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
+                    <div className="glass-card rounded-2xl p-8 border-t-2 border-t-primary/50 relative overflow-hidden group-hover/section:translate-y-[-5px] transition-transform duration-500">
+                      <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 blur-[50px] pointer-events-none" />
+                      
+                      <h3 className="text-xs font-mono tracking-widest uppercase text-foreground mb-8 text-center bg-background/50 inline-block px-4 py-1 rounded-full border border-border">Execution Pipeline</h3>
+                      
+                      <div className="space-y-6 relative">
                         {service.process.map((step, i) => (
-                          <div key={i} className="flex items-start">
-                            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-semibold text-sm flex-shrink-0">
-                              {i + 1}
+                          <div key={i} className="flex items-start relative z-10 group/step">
+                            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-background border-2 border-primary/40 text-primary font-mono text-sm font-bold shadow-[0_0_10px_oklch(0.72_0.19_195/0.2)] group-hover/step:bg-primary group-hover/step:text-primary-foreground group-hover/step:shadow-[0_0_15px_oklch(0.72_0.19_195/0.5)] transition-all duration-300 mt-0.5">
+                              0{i + 1}
                             </div>
-                            <div className="ml-4">
-                              <p className="font-semibold text-foreground">{step}</p>
+                            <div className="ml-5">
+                              <p className="font-semibold text-foreground tracking-wide group-hover/step:text-primary transition-colors">{step}</p>
                             </div>
                             {i < service.process.length - 1 && (
-                              <div className="absolute left-4 top-12 w-0.5 h-8 bg-gradient-to-b from-primary to-secondary opacity-50" />
+                              <div className="absolute left-4 top-10 w-[1px] h-[calc(100%+8px)] bg-gradient-to-b from-primary/50 to-transparent -z-10" />
                             )}
                           </div>
                         ))}
@@ -238,31 +246,30 @@ export default function Services() {
       </section>
 
       {/* Industries */}
-      <section className="py-20 sm:py-32 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              We Work With Everyone
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Specialized solutions for diverse industries. Whatever your business, we understand
-              your unique needs.
-            </p>
+      <section className="py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-radial-glow opacity-30 pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16 animate-fade-in-up">
+            <h2 className="text-xs font-mono text-secondary uppercase tracking-widest mb-3">Target Sectors</h2>
+            <h3 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+              Configured for Industry Networks
+            </h3>
+            <div className="w-16 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {industries.map((industry, i) => (
               <div
                 key={i}
-                className="bg-card border border-border rounded-lg p-6 hover:border-primary hover:shadow-lg transition-all"
+                className="glass-card rounded-xl p-8 hover:border-primary/50 hover:shadow-[0_0_20px_oklch(0.72_0.19_195/0.15)] transition-all duration-300 group"
               >
-                <div className="text-4xl mb-4">{industry.icon}</div>
-                <h3 className="text-lg font-bold text-foreground mb-4">{industry.name}</h3>
-                <ul className="space-y-2">
+                <div className="text-4xl mb-6 bg-background/50 inline-flex p-4 rounded-xl border border-border group-hover:scale-110 transition-transform duration-300 shadow-inner">{industry.icon}</div>
+                <h3 className="text-xl font-bold text-foreground mb-6 font-mono tracking-tight group-hover:text-primary transition-colors">{industry.name}</h3>
+                <ul className="space-y-3">
                   {industry.benefits.map((benefit, j) => (
-                    <li key={j} className="flex items-start text-sm text-muted-foreground">
-                      <span className="text-primary mr-2">→</span>
-                      <span>{benefit}</span>
+                    <li key={j} className="flex items-center text-sm text-muted-foreground border-b border-border/30 pb-2 last:border-0 last:pb-0">
+                      <span className="text-secondary font-mono mr-3 text-xs w-3 overflow-hidden opacity-70 {'>'}</span>
+                      <span className="group-hover:text-foreground transition-colors">{benefit}</span>
                     </li>
                   ))}
                 </ul>
@@ -273,87 +280,91 @@ export default function Services() {
       </section>
 
       {/* Pricing Preview */}
-      <section className="py-20 sm:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              Transparent Pricing
-            </h2>
+      <section className="py-24 relative border-t border-border/30 bg-muted/10">
+        <div className="absolute inset-0 bg-grid opacity-10 pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-xs font-mono text-secondary uppercase tracking-widest mb-3">Resource Allocation</h2>
+            <h3 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+              Transparent Architectures
+            </h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              No hidden fees. We&apos;ll provide a custom quote based on your specific needs during
-              your consultation.
+              Pricing designed for growing Indian enterprises. Custom SLAs quoted during data-room sessions.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
               {
-                name: 'Starter',
-                price: '$2,500+',
-                description: 'Perfect for new businesses',
+                name: 'Bootstrapper Node',
+                price: '₹15,000+',
+                description: 'Pre-seed tech stack deployment',
                 features: [
-                  'Professional website',
-                  'Mobile responsive',
-                  'Basic SEO',
-                  '3 months support',
+                  'Next.js/React frontend',
+                  'Mobile-first responsive',
+                  'Technical SEO baseline',
+                  '30-day bug warranty',
                 ],
               },
               {
-                name: 'Professional',
-                price: '$5,000+',
-                description: 'Best for growing businesses',
+                name: 'Series A Core',
+                price: '₹45,000+',
+                description: 'High-availability infrastructure',
                 features: [
-                  'Custom features',
-                  'Booking/E-commerce',
-                  'Advanced SEO',
-                  '6 months support',
+                  'Custom backend APIs',
+                  'Payment gateway (UPI+CC)',
+                  'Analytics dashboard',
+                  '90-day SLA support',
                 ],
                 featured: true,
               },
               {
-                name: 'Enterprise',
+                name: 'Enterprise Grid',
                 price: 'Custom',
-                description: 'For larger operations',
+                description: 'Bespoke microservice architecture',
                 features: [
-                  'Fully custom solutions',
-                  'Complex integrations',
-                  'Dedicated support',
-                  'Ongoing maintenance',
+                  'Unlimited scale nodes',
+                  'Legacy system bridges',
+                  'Dedicated DevOps engineer',
+                  '24/7 Red Alert SLA',
                 ],
               },
             ].map((plan, i) => (
               <div
                 key={i}
-                className={`rounded-lg p-8 border transition-all ${
+                className={`rounded-2xl p-8 transition-all duration-500 relative flex flex-col ${
                   plan.featured
-                    ? 'border-primary bg-gradient-to-br from-primary/5 to-secondary/5 relative scale-105'
-                    : 'border-border bg-card hover:border-primary'
+                    ? 'border border-primary bg-primary/5 relative scale-105 shadow-[0_0_40px_oklch(0.72_0.19_195/0.15)] z-10'
+                    : 'glass-card hover:border-primary/40'
                 }`}
               >
                 {plan.featured && (
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 py-1 bg-gradient-to-r from-primary to-secondary text-white text-sm font-semibold rounded-full">
-                    Most Popular
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 py-1.5 bg-gradient-to-r from-primary to-secondary text-primary-foreground text-xs font-mono font-bold tracking-widest uppercase rounded-full shadow-[0_0_15px_oklch(0.72_0.19_195/0.4)] whitespace-nowrap">
+                    Optimal Value
                   </div>
                 )}
-                <h3 className="text-xl font-bold text-foreground mb-2">{plan.name}</h3>
-                <p className="text-muted-foreground text-sm mb-4">{plan.description}</p>
-                <p className="text-3xl font-bold text-primary mb-6">{plan.price}</p>
-                <ul className="space-y-3 mb-8">
+                
+                <h3 className="text-xl font-bold text-foreground mb-3 font-mono">{plan.name}</h3>
+                <p className="text-muted-foreground text-sm mb-6 pb-6 border-b border-border/50">{plan.description}</p>
+                <p className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-8">{plan.price}</p>
+                
+                <ul className="space-y-4 mb-10 flex-grow">
                   {plan.features.map((feature, j) => (
-                    <li key={j} className="flex items-center text-sm text-foreground">
-                      <CheckCircle size={16} className="text-primary mr-2" />
+                    <li key={j} className="flex items-start text-sm text-foreground">
+                      <span className="w-1.5 h-1.5 rounded-full bg-secondary mr-3 mt-1.5" />
                       {feature}
                     </li>
                   ))}
                 </ul>
+                
                 <Button
                   asChild
                   variant={plan.featured ? 'default' : 'outline'}
-                  className={`w-full ${
-                    plan.featured ? 'bg-primary text-primary-foreground hover:bg-primary/90' : ''
+                  className={`w-full py-6 font-semibold tracking-wide ${
+                    plan.featured ? 'bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_20px_oklch(0.72_0.19_195/0.3)]' : 'glass-card border-border hover:border-primary/50'
                   }`}
                 >
-                  <Link href="/contact">Get Started</Link>
+                  <Link href="/contact">Request Initialization</Link>
                 </Button>
               </div>
             ))}
@@ -362,24 +373,26 @@ export default function Services() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 sm:py-32 bg-gradient-to-br from-primary to-secondary text-primary-foreground">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-            Ready to Get Started?
-          </h2>
-          <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
-            Let&apos;s discuss your project and create a plan that works for your budget and
-            timeline.
-          </p>
-          <Button
-            asChild
-            size="lg"
-            className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
-          >
-            <Link href="/contact" className="flex items-center">
-              Schedule Your Consultation <ArrowRight size={20} className="ml-2" />
-            </Link>
-          </Button>
+      <section className="py-32 relative overflow-hidden border-t border-border/30">
+        <div className="absolute inset-0 bg-radial-glow opacity-60 pointer-events-none" />
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <div className="glass-card p-12 rounded-2xl border-primary/20 backdrop-blur-3xl">
+            <h2 className="text-3xl sm:text-5xl font-bold mb-6 text-foreground tracking-tight">
+              Begin Upload Sequence
+            </h2>
+            <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto font-mono text-sm">
+              // Sync with our technical architects to scope your roadmap and define sprint cycles.
+            </p>
+            <Button
+              asChild
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg group shadow-[0_0_20px_oklch(0.72_0.19_195/0.4)] hover:shadow-[0_0_30px_oklch(0.72_0.19_195/0.6)] transition-all duration-300"
+            >
+              <Link href="/contact" className="flex items-center font-bold tracking-wide">
+                Establish Comms Link <ArrowRight size={20} className="ml-3 group-hover:translate-x-2 transition-transform" />
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
 

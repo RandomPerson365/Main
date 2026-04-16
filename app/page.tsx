@@ -9,271 +9,302 @@ import { CaseStudyCard } from '@/components/CaseStudyCard';
 const caseStudies = [
   {
     id: 'cafe-modernization',
-    title: 'The Cozy Cup - Digital Transformation',
+    title: 'CyberChai - Digital Transformation',
     category: 'Cafe',
-    description: 'Local favorite cafe needed an online presence to compete with chains.',
-    result: 'Implemented online ordering system and reservation platform.',
+    description: 'Local favorite cafe needed a futuristic online ordering portal.',
+    result: 'Deployed hyper-speed ordering system & AR menu integration.',
     image: '☕',
     metrics: [
-      { label: 'Order Increase', value: '+185%' },
-      { label: 'Monthly Revenue', value: '+$8,500' },
+      { label: 'Order Volume', value: '+185%' },
+      { label: 'Monthly Rev', value: '+₹7,50,000' },
     ],
   },
   {
     id: 'hotel-booking',
-    title: 'Sunset Haven Hotel - Booking Revolution',
+    title: 'Neon Oasis Resort - Booking Platform',
     category: 'Hotel',
-    description: 'Boutique hotel struggling with manual booking processes and outdated website.',
-    result: 'Built custom booking system with payment integration.',
+    description: 'Boutique resort required a high-conversion booking engine.',
+    result: 'Built real-time booking gateway with holographic tour previews.',
     image: '🏨',
     metrics: [
       { label: 'Direct Bookings', value: '+220%' },
-      { label: 'Occupancy Rate', value: '89%' },
+      { label: 'Occupancy', value: '89%' },
     ],
   },
   {
     id: 'restaurant-launch',
-    title: 'Bistro Rouge - Brand Launch',
+    title: 'Spice Circuit - Brand Launch',
     category: 'Restaurant',
-    description: 'New restaurant needed complete digital presence before opening.',
-    result: 'Created brand identity, website, and social media management strategy.',
+    description: 'New dining concept needed complete digital brand deployment.',
+    result: 'Launched omnichannel presence with AI-driven reservation management.',
     image: '🍽️',
     metrics: [
-      { label: 'Day 1 Reservations', value: '45' },
-      { label: 'Social Following', value: '2,400' },
+      { label: 'Day 1 Traffic', value: '450+' },
+      { label: 'Social Reach', value: '25K+' },
     ],
   },
   {
     id: 'bakery-ecommerce',
-    title: 'Artisan Bakery - E-commerce Platform',
-    category: 'Food Business',
-    description: 'Traditional bakery wanted to expand with online orders and delivery.',
-    result: 'Built e-commerce platform with inventory management.',
+    title: 'Quantum Bakes - E-Commerce',
+    category: 'Delivery',
+    description: 'Traditional bakery scaling to city-wide drone delivery.',
+    result: 'Developed scalable e-commerce core with real-time tracking.',
     image: '🥐',
     metrics: [
-      { label: 'Online Orders', value: '+340%' },
-      { label: 'New Customers', value: '+650' },
+      { label: 'Online Sales', value: '+340%' },
+      { label: 'New Nodes', value: '+650' },
     ],
   },
   {
     id: 'spa-wellness',
-    title: 'Serenity Spa - Online Presence',
+    title: 'Zenica Spa - Appointment System',
     category: 'Wellness',
-    description: 'Spa needed better appointment booking and customer management.',
-    result: 'Implemented online booking with email reminders and loyalty program.',
+    description: 'Wellness center required seamless scheduling architecture.',
+    result: 'Implemented automated booking with predictive availability.',
     image: '💆',
     metrics: [
-      { label: 'Bookings Online', value: '65%' },
-      { label: 'Customer Retention', value: '+42%' },
+      { label: 'Online Bookings', value: '65%' },
+      { label: 'Retention', value: '+42%' },
     ],
   },
   {
     id: 'retail-shop',
-    title: 'Boutique Threads - E-commerce Launch',
+    title: 'Threads.io - E-Store Launch',
     category: 'Retail',
-    description: 'Independent clothing store needed e-commerce to reach beyond locals.',
-    result: 'Created fully functional online store with inventory sync.',
+    description: 'Fashion outlet transitioning to digital-first sales model.',
+    result: 'Engineered high-performance storefront with automated inventory sync.',
     image: '👗',
     metrics: [
-      { label: 'Online Revenue', value: '$15,000/mo' },
-      { label: 'Geographic Reach', value: '5 Countries' },
+      { label: 'Revenue Base', value: '₹12L/mo' },
+      { label: 'Market Reach', value: 'Pan-India' },
     ],
   },
 ];
 
 const testimonials = [
   {
-    name: 'Maria Santos',
-    role: 'Owner, The Cozy Cup Cafe',
+    name: 'Aarav Sharma',
+    role: 'Founder, CyberChai',
     testimonial:
-      "Serverstack transformed our online presence completely. The website is beautiful and the ordering system tripled our online sales. Highly recommend!",
+      "Serverstack executed our digital transition flawlessly. The interface is stunning and the backend handles our peak load effortlessly. Outstanding tech.",
+    avatar: '👨‍💻',
+  },
+  {
+    name: 'Priya Patel',
+    role: 'Director, Neon Oasis Resort',
+    testimonial:
+      "Precision engineering and visionary design. They didn't just build a website; they constructed our primary revenue engine. Incredible ROI.",
     avatar: '👩‍💼',
   },
   {
-    name: 'James Mitchell',
-    role: 'Manager, Sunset Haven Hotel',
+    name: 'Rahul Verma',
+    role: 'Head Chef, Spice Circuit',
     testimonial:
-      'Professional, responsive, and talented team. They understood our needs and delivered beyond expectations. Our booking system is flawless.',
-    avatar: '👨‍💼',
-  },
-  {
-    name: 'Sophie Laurent',
-    role: 'Chef & Owner, Bistro Rouge',
-    testimonial:
-      'From concept to launch, Serverstack handled everything. Their design made our restaurant look premium and attracted customers immediately.',
-    avatar: '👩‍🍳',
+      "From zero to full digital presence in record time. The analytics dashboard they built gives us real-time insights into customer preferences.",
+    avatar: '👨‍🍳',
   },
 ];
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background selection:bg-primary/30 selection:text-primary">
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 sm:py-32">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/5" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <section className="relative overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-32">
+        <div className="absolute inset-0 bg-grid opacity-20 pointer-events-none" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-full max-w-lg h-96 bg-primary/20 blur-[120px] rounded-full pointer-events-none animate-glow-pulse" />
+        
+        {/* Animated particles/nodes background could go here */}
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
-            <div className="inline-flex items-center justify-center space-x-2 mb-6">
-              <div className="px-4 py-2 bg-primary/10 rounded-full border border-primary/20">
-                <p className="text-sm font-semibold text-primary">
-                  ✨ Trusted by 50+ Businesses
+            <div className="inline-flex items-center justify-center space-x-2 mb-8 animate-fade-in-up">
+              <div className="px-4 py-1.5 glass-card rounded-full border-primary/30 shadow-[0_0_15px_oklch(0.72_0.19_195/0.2)]">
+                <p className="text-xs tracking-widest font-mono text-primary uppercase">
+                  <span className="inline-block w-2 h-2 rounded-full bg-secondary animate-pulse mr-2" />
+                  System Online // Verified Partners
                 </p>
               </div>
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance leading-tight">
-              Beautiful Websites that{' '}
-              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                Drive Results
-              </span>
+            
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-6 text-balance leading-tight tracking-tight animate-fade-in-up delay-100">
+              Next-Gen Digital <br className="hidden sm:block" />
+              <span className="text-gradient drop-shadow-sm">Infrastructure</span>
             </h1>
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 text-balance">
-              Professional web design and management for cafes, hotels, and growing businesses. We
-              help you establish a powerful online presence that converts visitors into customers.
+            
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 text-balance animate-fade-in-up delay-200">
+              Architecting high-performance web platforms and digital ecosystems for ambitious Indian enterprises. We turn complex requirements into elegant code.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            
+            <div className="flex flex-col sm:flex-row gap-5 justify-center animate-fade-in-up delay-300">
               <Button
                 asChild
                 size="lg"
-                className="bg-gradient-to-r from-primary to-secondary text-white hover:opacity-90 transition-opacity"
+                className="bg-primary/20 border border-primary/50 text-foreground hover:bg-primary/30 hover:shadow-[0_0_20px_oklch(0.72_0.19_195/0.4)] transition-all duration-300 relative overflow-hidden group"
               >
-                <Link href="/contact">Get Started Today</Link>
+                <Link href="/contact">
+                  <span className="relative z-10 font-semibold tracking-wide flex items-center">
+                    Initialize Project <Zap size={18} className="ml-2 group-hover:text-secondary transition-colors" />
+                  </span>
+                  <div className="absolute inset-0 w-1/4 h-full bg-white/10 -skew-x-[30deg] -translate-x-[200%] group-hover:animate-[shimmer_1.5s_infinite]" />
+                </Link>
               </Button>
               <Button
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-primary text-primary hover:bg-primary/5"
+                className="glass-card hover:border-secondary/50 text-foreground transition-all duration-300 group"
               >
-                <Link href="/portfolio">View Our Work</Link>
+                <Link href="/portfolio">
+                  <span className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary transition-all">
+                    Access Case Files
+                  </span>
+                </Link>
               </Button>
+            </div>
+          </div>
+        </div>
+        
+        {/* Decorative scanning line */}
+        <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-50" />
+      </section>
+
+      {/* Services Section */}
+      <section className="py-24 relative">
+        <div className="absolute top-0 left-0 w-full h-full bg-radial-glow opacity-30 pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16 animate-fade-in-up">
+            <h2 className="text-sm tracking-widest font-mono text-secondary uppercase mb-3">Core Modules</h2>
+            <h3 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+              Our Capabilities
+            </h3>
+            <div className="w-16 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="animate-fade-in-up delay-100">
+              <ServiceCard
+                icon={<PenTool size={24} />}
+                title="UI/UX Engineering"
+                description="Precision-crafted interfaces optimized for user flow and conversion rates."
+                features={[
+                  'Responsive architecture',
+                  'Component libraries',
+                  'Interaction design',
+                  'State management',
+                ]}
+              />
+            </div>
+            <div className="animate-fade-in-up delay-200">
+              <ServiceCard
+                icon={<Zap size={24} />}
+                title="System Development"
+                description="Robust, scalable backend architectures and API integrations."
+                features={[
+                  'Microservices',
+                  'Database design',
+                  'Payment gateways',
+                  'Low-latency APIs',
+                ]}
+              />
+            </div>
+            <div className="animate-fade-in-up delay-300">
+              <ServiceCard
+                icon={<Wrench size={24} />}
+                title="DevOps & Security"
+                description="Continuous deployment, server monitoring, and vulnerability patching."
+                features={[
+                  'CI/CD pipelines',
+                  'DDoS protection',
+                  'Load balancing',
+                  'Automated backups',
+                ]}
+              />
+            </div>
+            <div className="animate-fade-in-up delay-400">
+              <ServiceCard
+                icon={<TrendingUp size={24} />}
+                title="Growth Tech"
+                description="Data-driven SEO infrastructures and analytics telemetry."
+                features={[
+                  'Technical SEO',
+                  'Event tracking',
+                  'A/B testing protocols',
+                  'Performance audits',
+                ]}
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-20 sm:py-32 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              Our Services
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Everything you need for a successful online presence, tailored to your business
-              needs.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <ServiceCard
-              icon={<PenTool size={24} />}
-              title="Website Design"
-              description="Custom, beautiful websites that reflect your brand and engage visitors."
-              features={[
-                'Responsive design',
-                'Modern aesthetics',
-                'User-focused layouts',
-                'Mobile optimized',
-              ]}
-            />
-            <ServiceCard
-              icon={<Zap size={24} />}
-              title="Development"
-              description="Powerful, fast websites built with modern technology."
-              features={[
-                'Custom functionality',
-                'Payment integration',
-                'Booking systems',
-                'Fast performance',
-              ]}
-            />
-            <ServiceCard
-              icon={<Wrench size={24} />}
-              title="Maintenance"
-              description="Keep your website secure, updated, and running smoothly."
-              features={[
-                'Regular updates',
-                'Security monitoring',
-                'Performance optimization',
-                '24/7 support',
-              ]}
-            />
-            <ServiceCard
-              icon={<TrendingUp size={24} />}
-              title="SEO & Growth"
-              description="Help customers find you with smart SEO and marketing strategies."
-              features={[
-                'SEO optimization',
-                'Local rankings',
-                'Content strategy',
-                'Performance tracking',
-              ]}
-            />
-          </div>
-        </div>
-      </section>
-
       {/* Featured Case Studies */}
-      <section className="py-20 sm:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              Recent Projects
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Real results from real businesses just like yours.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {caseStudies.slice(0, 3).map((study) => (
-              <CaseStudyCard key={study.id} {...study} />
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
+      <section className="py-24 bg-background relative overflow-hidden border-y border-border/30">
+        <div className="absolute inset-0 bg-dots opacity-20 pointer-events-none" />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16 animate-fade-in-up">
+            <div className="max-w-2xl">
+              <h2 className="text-sm tracking-widest font-mono text-secondary uppercase mb-3">Deployment Logs</h2>
+              <h3 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+                Recent Operations
+              </h3>
+              <p className="text-lg text-muted-foreground">
+                Verified impact metrics from our latest successful deployments.
+              </p>
+            </div>
             <Button
               asChild
-              size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90"
+              variant="outline"
+              className="mt-6 md:mt-0 glass-card text-primary hover:border-primary/50 group"
             >
               <Link href="/portfolio" className="flex items-center">
-                View All Projects <ArrowRight size={20} className="ml-2" />
+                Query All Databanks <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {caseStudies.slice(0, 3).map((study, i) => (
+              <div key={study.id} className={`animate-fade-in-up delay-${(i + 1) * 100}`}>
+                <CaseStudyCard {...study} />
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 sm:py-32 bg-gradient-to-br from-primary to-secondary text-primary-foreground">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">What Our Clients Say</h2>
-            <p className="text-lg opacity-90 max-w-2xl mx-auto">
-              Hear from business owners who've transformed their online presence with Serverstack.
-            </p>
+      <section className="py-24 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16 animate-fade-in-up">
+            <h2 className="text-sm tracking-widest font-mono text-secondary uppercase mb-3">Client Telemetry</h2>
+            <h3 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">Network Feedback</h3>
+            <div className="w-16 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, i) => (
               <div
                 key={i}
-                className="bg-primary-foreground/10 backdrop-blur border border-primary-foreground/20 rounded-lg p-8"
+                className={`glass-card rounded-xl p-8 animate-fade-in-up delay-${(i + 1) * 100} relative group hover:-translate-y-2 transition-transform duration-300`}
               >
-                <div className="flex items-center mb-4">
+                <div className="absolute top-0 right-8 -translate-y-1/2 opacity-20 text-6xl font-serif text-primary">"</div>
+                <div className="flex items-center mb-6">
                   {[...Array(5)].map((_, j) => (
-                    <Star key={j} size={16} className="fill-current" />
+                    <Star key={j} size={14} className="text-secondary fill-secondary mr-1" />
                   ))}
                 </div>
-                <p className="mb-6 text-primary-foreground/90">&ldquo;{testimonial.testimonial}&rdquo;</p>
-                <div className="flex items-center">
-                  <div className="text-2xl mr-3">{testimonial.avatar}</div>
+                <p className="mb-8 text-muted-foreground leading-relaxed italic relative z-10">&ldquo;{testimonial.testimonial}&rdquo;</p>
+                <div className="flex items-center border-t border-border/30 pt-6">
+                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-xl mr-4 border border-primary/30">
+                    {testimonial.avatar}
+                  </div>
                   <div>
-                    <p className="font-semibold">{testimonial.name}</p>
-                    <p className="text-sm opacity-80">{testimonial.role}</p>
+                    <p className="font-bold text-foreground text-sm tracking-wide">{testimonial.name}</p>
+                    <p className="text-xs text-secondary font-mono tracking-wider uppercase mt-1">{testimonial.role}</p>
                   </div>
                 </div>
               </div>
@@ -283,21 +314,28 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 sm:py-32">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
-            Ready to Take Your Business Online?
-          </h2>
-          <p className="text-lg text-muted-foreground mb-8 text-balance">
-            Let&apos;s create something amazing together. Contact us for a free consultation.
-          </p>
-          <Button
-            asChild
-            size="lg"
-            className="bg-gradient-to-r from-primary to-secondary text-white hover:opacity-90"
-          >
-            <Link href="/contact">Schedule Your Free Consultation</Link>
-          </Button>
+      <section className="py-24 relative overflow-hidden border-t border-border/30">
+        <div className="absolute inset-0 bg-radial-glow opacity-50 pointer-events-none" />
+        <div className="absolute inset-0 bg-dots opacity-20 pointer-events-none" />
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <div className="glass-card rounded-2xl p-12 md:p-16 border-primary/30 hover:border-primary/60 transition-colors duration-500 shadow-[0_0_30px_oklch(0.72_0.19_195/0.1)]">
+            <h2 className="text-3xl sm:text-5xl font-bold text-foreground mb-6">
+              Initiate <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Sequence</span>
+            </h2>
+            <p className="text-lg text-muted-foreground mb-10 text-balance font-mono">
+              // CONNECT TO SECURE COMMS CHANNEL FOR PROJECT EVALUATION
+            </p>
+            <Button
+              asChild
+              size="lg"
+              className="bg-gradient-to-r from-primary to-secondary text-white border-0 hover:opacity-90 hover:shadow-[0_0_25px_oklch(0.72_0.19_195/0.5)] transition-all duration-300 px-8 py-6 text-lg group"
+            >
+              <Link href="/contact" className="flex items-center">
+                Establish Connection 
+                <span className="ml-3 w-2 h-2 rounded-full bg-white animate-pulse" />
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
 
