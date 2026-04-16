@@ -12,9 +12,9 @@ export function Footer() {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-white to-primary-foreground flex items-center justify-center">
-                <span className="text-primary font-bold text-sm">PF</span>
+                <span className="text-primary font-bold text-sm">SS</span>
               </div>
-              <span className="text-xl font-bold">PixelForge</span>
+              <span className="text-xl font-bold">Serverstack</span>
             </div>
             <p className="text-sm opacity-90">
               Building beautiful websites for cafes, hotels, and growing businesses.
@@ -75,11 +75,11 @@ export function Footer() {
             <h3 className="font-semibold text-lg mb-4">Contact</h3>
             <div className="space-y-3 text-sm">
               <a
-                href="mailto:hello@pixelforge.co"
+                href="mailto:hello@serverstack.co"
                 className="flex items-center space-x-2 opacity-90 hover:opacity-100 transition"
               >
                 <Mail size={16} />
-                <span>hello@pixelforge.co</span>
+                <span>hello@serverstack.co</span>
               </a>
               <div className="flex space-x-4 pt-2">
                 <a
@@ -101,7 +101,7 @@ export function Footer() {
 
         <div className="border-t border-primary-foreground/20 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm opacity-90">
-            &copy; {currentYear} PixelForge. All rights reserved.
+            &copy; {currentYear} Serverstack. All rights reserved.
           </p>
           <div className="flex space-x-6 text-sm mt-4 md:mt-0">
             <a href="#" className="opacity-90 hover:opacity-100 transition">

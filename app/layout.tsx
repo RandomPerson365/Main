@@ -7,7 +7,7 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'PixelForge - Web Design & Management for Cafes & Hotels',
+  title: 'Serverstack - Web Design & Management for Cafes & Hotels',
   description: 'Professional website design, development, and management services for cafes, hotels, and new business owners. Grow your business online.',
   generator: 'v0.app',
   icons: {

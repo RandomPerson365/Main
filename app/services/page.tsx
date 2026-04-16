@@ -156,7 +156,7 @@ const industries = [
 ];
 
 export const metadata = {
-  title: 'Services | PixelForge - Web Design & Development',
+  title: 'Services | Serverstack - Web Design & Development',
   description: 'Professional web design, development, maintenance, and SEO services for cafes, hotels, and businesses.',
 };
 

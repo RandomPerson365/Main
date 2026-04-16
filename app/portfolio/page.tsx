@@ -117,7 +117,7 @@ const allCaseStudies = [
 ];
 
 export const metadata = {
-  title: 'Portfolio | PixelForge - Web Design Projects',
+  title: 'Portfolio | Serverstack - Web Design Projects',
   description: 'View our case studies and successful projects for cafes, hotels, restaurants, and businesses.',
 };
 

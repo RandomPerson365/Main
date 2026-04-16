@@ -86,7 +86,7 @@ const testimonials = [
     name: 'Maria Santos',
     role: 'Owner, The Cozy Cup Cafe',
     testimonial:
-      "PixelForge transformed our online presence completely. The website is beautiful and the ordering system tripled our online sales. Highly recommend!",
+      "Serverstack transformed our online presence completely. The website is beautiful and the ordering system tripled our online sales. Highly recommend!",
     avatar: '👩‍💼',
   },
   {
@@ -100,7 +100,7 @@ const testimonials = [
     name: 'Sophie Laurent',
     role: 'Chef & Owner, Bistro Rouge',
     testimonial:
-      'From concept to launch, PixelForge handled everything. Their design made our restaurant look premium and attracted customers immediately.',
+      'From concept to launch, Serverstack handled everything. Their design made our restaurant look premium and attracted customers immediately.',
     avatar: '👩‍🍳',
   },
 ];
@@ -253,7 +253,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">What Our Clients Say</h2>
             <p className="text-lg opacity-90 max-w-2xl mx-auto">
-              Hear from business owners who've transformed their online presence with PixelForge.
+              Hear from business owners who've transformed their online presence with Serverstack.
             </p>
           </div>
 

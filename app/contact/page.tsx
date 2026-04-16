@@ -85,10 +85,10 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold text-foreground">Email</h3>
                     <a
-                      href="mailto:hello@pixelforge.co"
+                      href="mailto:hello@serverstack.co"
                       className="text-primary hover:underline"
                     >
-                      hello@pixelforge.co
+                      hello@serverstack.co
                     </a>
                     <p className="text-sm text-muted-foreground mt-1">
                       We&apos;ll respond within 24 hours

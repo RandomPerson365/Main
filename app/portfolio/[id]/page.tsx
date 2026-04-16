@@ -50,7 +50,7 @@ const caseStudies: Record<
     ],
     services: ['Website Design', 'E-commerce Integration', 'Mobile Optimization', 'Social Media Setup'],
     testimonial: {
-      text: 'PixelForge completely transformed our business. Having an online presence has been game-changing. Our customers love the convenience, and we love the increased revenue. The team was responsive and really understood what we needed.',
+      text: 'Serverstack completely transformed our business. Having an online presence has been game-changing. Our customers love the convenience, and we love the increased revenue. The team was responsive and really understood what we needed.',
       author: 'Maria Santos',
       role: 'Owner, The Cozy Cup Cafe',
     },
@@ -197,7 +197,7 @@ The hotel has reduced its dependence on third-party platforms while improving bo
     ],
     services: ['Branding', 'Website Design', 'Reservation System', 'Social Media Strategy'],
     testimonial: {
-      text: 'From concept to opening day, PixelForge handled everything. Their design made our restaurant look premium and prestigious. We had a waiting list on opening night thanks to their marketing strategy. Best investment we made.',
+      text: 'From concept to opening day, Serverstack handled everything. Their design made our restaurant look premium and prestigious. We had a waiting list on opening night thanks to their marketing strategy. Best investment we made.',
       author: 'Sophie Laurent',
       role: 'Chef & Owner, Bistro Rouge',
     },
