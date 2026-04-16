@@ -306,7 +306,7 @@ export default function Contact() {
               },
               {
                 q: 'Is SEO telemetry included?',
-                a: 'Base nodes include structural DOM optimization. Advanced rank domination requires our 'Growth Telemetry' protocol integration (billed separately).',
+                a: "Base nodes include structural DOM optimization. Advanced rank domination requires our Growth Telemetry protocol integration (billed separately).",
               },
             ].map((faq, i) => (
               <div key={i} className="glass-card border-border/50 rounded-xl p-8 hover:border-primary/40 transition-colors group">
