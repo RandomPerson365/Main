@@ -1,14 +1,11 @@
-import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
-import './globals.css'
-
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+import type { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/next';
+import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Serverstack - Web Design & Management for Cafes & Hotels',
-  description: 'Professional website design, development, and management services for cafes, hotels, and new business owners. Grow your business online.',
+  title: 'SiteGrow India | Websites for Cafes & Hotels',
+  description:
+    'Professional websites, online ordering, and booking systems for cafe, restaurant, and hotel owners in India.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -27,12 +24,12 @@ export const metadata: Metadata = {
     ],
     apple: '/apple-icon.png',
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en" className="dark bg-background">
@@ -41,5 +38,5 @@ export default function RootLayout({
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
-  )
+  );
 }
