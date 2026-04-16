@@ -3,15 +3,15 @@ import { notFound } from 'next/navigation';
 import { ArrowLeft } from 'lucide-react';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
-import { caseStudiesById } from '@/app/data/caseStudies';
+import { caseStudies, getCaseStudyById } from '@/app/data/caseStudies';
 
 export async function generateStaticParams() {
-  return Object.keys(caseStudiesById).map((id) => ({ id }));
+  return caseStudies.map((study) => ({ id: study.id }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const study = caseStudiesById[id];
+  const study = getCaseStudyById(id);
 
   return {
     title: `${study?.title ?? 'Success Story'} | SiteGrow India`,
@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 
 export default async function CaseStudyDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const study = caseStudiesById[id];
+  const study = getCaseStudyById(id);
 
   if (!study) {
     notFound();

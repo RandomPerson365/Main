@@ -94,4 +94,6 @@ export const caseStudies: CaseStudy[] = [
   },
 ];
 
-export const caseStudiesById = Object.fromEntries(caseStudies.map((study) => [study.id, study]));
+export function getCaseStudyById(id: string) {
+  return caseStudies.find((study) => study.id === id);
+}
