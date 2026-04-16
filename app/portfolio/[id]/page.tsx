@@ -289,7 +289,7 @@ export default function CaseStudyDetail({ params }: { params: { id: string } }) 
                     <ul className="space-y-4 pl-0 list-none mt-4">
                       {paragraph.split('\n').map((item, j) => (
                         <li key={j} className="flex items-start bg-background/30 p-4 rounded-lg border border-border/20">
-                          <span className="text-secondary font-mono mr-4 mt-1 font-bold">{'>'}</span>
+                          <span className="text-secondary font-mono mr-4 mt-1 font-bold">&gt;</span>
                           <span className="text-foreground/90">{item.replace('- ', '')}</span>
                         </li>
                       ))}

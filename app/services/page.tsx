@@ -268,7 +268,7 @@ export default function Services() {
                 <ul className="space-y-3">
                   {industry.benefits.map((benefit, j) => (
                     <li key={j} className="flex items-center text-sm text-muted-foreground border-b border-border/30 pb-2 last:border-0 last:pb-0">
-                      <span className="text-secondary font-mono mr-3 text-xs w-3 overflow-hidden opacity-70">{'>'}</span>
+                      <span className="text-secondary font-mono mr-3 text-xs w-3 overflow-hidden opacity-70">&gt;</span>
                       <span className="group-hover:text-foreground transition-colors">{benefit}</span>
                     </li>
                   ))}

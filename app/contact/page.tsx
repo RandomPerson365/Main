@@ -129,10 +129,10 @@ export default function Contact() {
                   <h3 className="text-xs font-mono uppercase tracking-widest font-semibold">Standard Protocol</h3>
                 </div>
                 <ul className="space-y-3 text-sm text-foreground font-mono">
-                  <li className="flex items-center"><span className="text-secondary mr-3 text-xs">{'>'}</span> Initial brief analysis</li>
-                  <li className="flex items-center"><span className="text-secondary mr-3 text-xs">{'>'}</span> Architecture proposal</li>
-                  <li className="flex items-center"><span className="text-secondary mr-3 text-xs">{'>'}</span> Timeline estimation</li>
-                  <li className="flex items-center"><span className="text-secondary mr-3 text-xs">{'>'}</span> Resource allocation</li>
+                  <li className="flex items-center"><span className="text-secondary mr-3 text-xs">&gt;</span> Initial brief analysis</li>
+                  <li className="flex items-center"><span className="text-secondary mr-3 text-xs">&gt;</span> Architecture proposal</li>
+                  <li className="flex items-center"><span className="text-secondary mr-3 text-xs">&gt;</span> Timeline estimation</li>
+                  <li className="flex items-center"><span className="text-secondary mr-3 text-xs">&gt;</span> Resource allocation</li>
                 </ul>
               </div>
             </div>
@@ -311,7 +311,7 @@ export default function Contact() {
             ].map((faq, i) => (
               <div key={i} className="glass-card border-border/50 rounded-xl p-8 hover:border-primary/40 transition-colors group">
                 <h3 className="font-bold font-mono text-sm tracking-tight text-foreground mb-4 group-hover:text-primary transition-colors flex items-start">
-                  <span className="text-secondary mr-2">{'>'}</span> {faq.q}
+                  <span className="text-secondary mr-2">&gt;</span> {faq.q}
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed border-l border-border/50 pl-4 ml-1">{faq.a}</p>
               </div>
