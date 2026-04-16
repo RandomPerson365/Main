@@ -176,8 +176,24 @@ The servers flawlessly handled a 50x traffic spike when local influencers posted
   },
 };
 
-export default function CaseStudyDetail({ params }: { params: { id: string } }) {
-  const caseStudy = caseStudies[params.id];
+export async function generateStaticParams() {
+  return Object.keys(caseStudies).map((id) => ({
+    id: id,
+  }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const study = caseStudies[id];
+  return {
+    title: `${study?.title || 'Case Study'} | Serverstack`,
+    description: study?.challenge || 'Operational data logs.',
+  };
+}
+
+export default async function CaseStudyDetail({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const caseStudy = caseStudies[id];
 
   if (!caseStudy) {
     return (
@@ -216,7 +232,7 @@ export default function CaseStudyDetail({ params }: { params: { id: string } }) 
             Return to Core Database
           </Link>
           
-          <div className="mb-6 flex items-center space-x-4 animate-fade-in-up">
+          <div className="mb-6 flex items-center space-x-4">
             <span className="inline-block px-4 py-1.5 glass-card border-secondary/30 text-secondary text-xs uppercase tracking-widest font-mono rounded-full font-semibold shadow-[0_0_15px_oklch(0.7 0.18 195 / 0.2)]">
               Class: {caseStudy.category}
             </span>
@@ -285,7 +301,7 @@ export default function CaseStudyDetail({ params }: { params: { id: string } }) 
                     <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mt-12 mb-6 uppercase tracking-widest border-b border-border/50 pb-4 inline-block">
                       {paragraph.replace('## ', '')}
                     </h3>
-                  ) : paragraph.includes('-') && paragraph.split('\n').length > 1 ? (
+                  ) : paragraph.includes('- ') && paragraph.split('\n').length > 1 ? (
                     <ul className="space-y-4 pl-0 list-none mt-4">
                       {paragraph.split('\n').map((item, j) => (
                         <li key={j} className="flex items-start bg-background/30 p-4 rounded-lg border border-border/20">
