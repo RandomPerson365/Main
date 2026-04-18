@@ -89,3 +89,75 @@ html {
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .section-reveal {
+    animation: section-reveal 0.7s ease-out both;
+  }
+
+  .section-delay-1 {
+    animation-delay: 0.08s;
+  }
+
+  .section-delay-2 {
+    animation-delay: 0.16s;
+  }
+
+  .section-delay-3 {
+    animation-delay: 0.24s;
+  }
+
+  .section-delay-4 {
+    animation-delay: 0.32s;
+  }
+
+  .section-delay-5 {
+    animation-delay: 0.4s;
+  }
+
+  .section-delay-6 {
+    animation-delay: 0.48s;
+  }
+
+  .card-lift {
+    transition:
+      transform 220ms ease,
+      box-shadow 220ms ease,
+      border-color 220ms ease;
+    will-change: transform;
+  }
+
+  .card-lift:hover,
+  .card-lift:focus-within {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px -18px color-mix(in oklch, var(--foreground) 35%, transparent);
+  }
+}
+
+@keyframes section-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-reveal {
+    animation: none;
+  }
+
+  .card-lift {
+    transition: none;
+  }
+
+  .card-lift:hover,
+  .card-lift:focus-within {
+    transform: none;
+    box-shadow: none;
+  }
+}

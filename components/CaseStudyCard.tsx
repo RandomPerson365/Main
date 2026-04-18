@@ -13,10 +13,15 @@ interface CaseStudyCardProps {
 
 export function CaseStudyCard({ id, title, category, description, result, image, metrics }: CaseStudyCardProps) {
   return (
-    <Link href={`/portfolio/${id}`} className="block h-full rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
-      <article className="h-full rounded-xl border border-border bg-card p-6 hover:border-primary/40 transition-colors">
+    <Link
+      href={`/portfolio/${id}`}
+      className="group block h-full rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+    >
+      <article className="card-lift h-full rounded-xl border border-border bg-card p-6 hover:border-primary/40 transition-colors">
         <div className="flex items-center justify-between mb-4">
-          <span className="text-3xl" aria-hidden="true">{image}</span>
+          <span className="text-3xl transition-transform duration-200 group-hover:scale-110" aria-hidden="true">
+            {image}
+          </span>
           <span className="text-xs font-medium text-muted-foreground bg-muted px-2 py-1 rounded">{category}</span>
         </div>
 
@@ -34,7 +39,7 @@ export function CaseStudyCard({ id, title, category, description, result, image,
 
         <p className="text-sm text-foreground mb-4"><span className="font-semibold">Result:</span> {result}</p>
         <span className="inline-flex items-center text-sm font-semibold text-primary">
-          Read full story <ArrowRight size={16} className="ml-1" />
+          Read full story <ArrowRight size={16} className="ml-1 transition-transform duration-200 group-hover:translate-x-1" />
         </span>
       </article>
     </Link>
