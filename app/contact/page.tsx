@@ -46,7 +46,11 @@ export default function ContactPage() {
                   <Phone size={18} className="text-primary mr-3 mt-0.5" />
                   <div>
                     <p className="font-medium text-foreground">Call us</p>
-                    <Link href="tel:+919545244572" className="text-muted-foreground hover:text-foreground transition-colors">
+                    <Link
+                      href="tel:+919545244572"
+                      className="text-muted-foreground hover:text-foreground transition-colors"
+                      aria-label="Call us at +91 9545244572"
+                    >
                       +91 9545244572
                     </Link>
                   </div>
@@ -67,6 +71,7 @@ export default function ContactPage() {
                       className="text-muted-foreground hover:text-foreground transition-colors"
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label="Message us on WhatsApp at +91 9545244572 (opens in new tab)"
                     >
                       Message us on +91 9545244572
                     </Link>
