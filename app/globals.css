@@ -124,13 +124,19 @@ html {
       transform 220ms ease,
       box-shadow 220ms ease,
       border-color 220ms ease;
-    will-change: transform;
   }
 
   .card-lift:hover,
   .card-lift:focus-within {
     transform: translateY(-4px);
-    box-shadow: 0 14px 30px -18px color-mix(in oklch, var(--foreground) 35%, transparent);
+    box-shadow: 0 14px 30px -18px rgb(15 23 42 / 0.25);
+  }
+
+  @supports (color: color-mix(in oklch, black 50%, transparent)) {
+    .card-lift:hover,
+    .card-lift:focus-within {
+      box-shadow: 0 14px 30px -18px color-mix(in oklch, var(--foreground) 35%, transparent);
+    }
   }
 }
 
