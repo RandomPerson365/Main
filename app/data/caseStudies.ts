@@ -15,7 +15,7 @@ export type CaseStudy = {
 export const caseStudies: CaseStudy[] = [
   {
     id: 'cafe-online-orders',
-    title: 'The Daily Brew Cafe, Bengaluru',
+    title: 'The Daily Brew Cafe, Lucknow',
     category: 'Cafe',
     description: 'Independent cafe needed online ordering and better local visibility.',
     challenge: 'The cafe relied only on walk-ins and calls. Peak hour phone calls were missed and repeat customers had no easy way to reorder.',

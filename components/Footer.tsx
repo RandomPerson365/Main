@@ -39,7 +39,7 @@ export function Footer() {
             <div className="space-y-2 text-sm text-muted-foreground">
               <p>Akshay12345Singh@gmail.com</p>
               <p>+91 9545244572</p>
-              <p>Bengaluru, India</p>
+              <p>Lucknow, India</p>
             </div>
           </div>
         </div>

@@ -107,7 +107,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-reveal section-delay-1 py-20 bg-muted/30">
+      <section className="section-reveal section-delay-1 section-divider py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-3">What you get</h2>
@@ -131,7 +131,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-reveal section-delay-2 py-20" id="success-stories">
+      <section className="section-reveal section-delay-2 section-divider py-20" id="success-stories">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
             <div>
@@ -151,7 +151,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-reveal section-delay-3 py-20 bg-muted/30">
+      <section className="section-reveal section-delay-3 section-divider py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-3">Why choose us</h2>
@@ -172,7 +172,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-reveal section-delay-4 py-20">
+      <section className="section-reveal section-delay-4 section-divider py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-3">What business owners say</h2>
@@ -189,7 +189,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-reveal section-delay-5 py-20">
+      <section className="section-reveal section-delay-5 section-divider py-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-3">Frequently asked questions</h2>
@@ -206,7 +206,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-reveal section-delay-6 py-20 bg-primary text-primary-foreground">
+      <section className="section-reveal section-delay-6 section-divider py-20 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ready to grow your business online?</h2>
           <p className="mb-8 text-primary-foreground/90">
