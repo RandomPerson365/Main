@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/next';
 import './globals.css';
+import { CursorTrail } from '@/components/CursorTrail';
 
 export const metadata: Metadata = {
   title: 'Servestack | Websites for Cafes & Hotels',
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark bg-background">
       <body className="font-sans antialiased">
+        <CursorTrail />
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
