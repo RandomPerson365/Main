@@ -4,7 +4,7 @@ import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 
 export const metadata = {
-  title: 'Pricing | SiteGrow India',
+  title: 'Pricing | Servestack',
   description: 'Pricing comparison for website, ordering, booking, and support services.',
 };
 

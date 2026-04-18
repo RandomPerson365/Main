@@ -21,9 +21,9 @@ export function Navbar() {
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 rounded-md bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm">
-              SG
+              SS
             </div>
-            <span className="text-lg font-semibold text-foreground">SiteGrow India</span>
+            <span className="text-lg font-semibold text-foreground">Servestack</span>
           </Link>
 
           <div className="hidden md:flex items-center space-x-1">

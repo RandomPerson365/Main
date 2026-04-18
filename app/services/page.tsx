@@ -6,7 +6,7 @@ import { ServiceCard } from '@/components/ServiceCard';
 import { Button } from '@/components/ui/button';
 
 export const metadata = {
-  title: 'Services | SiteGrow India',
+  title: 'Services | Servestack',
   description: 'Websites, ordering, bookings, and support services for cafes and hotels in India.',
 };
 

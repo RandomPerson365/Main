@@ -5,7 +5,7 @@ import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 
 export const metadata = {
-  title: 'Support & Maintenance | SiteGrow India',
+  title: 'Support & Maintenance | Servestack',
   description: 'Website support and maintenance plans for cafes and hotels.',
 };
 

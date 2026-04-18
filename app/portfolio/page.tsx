@@ -4,7 +4,7 @@ import { CaseStudyCard } from '@/components/CaseStudyCard';
 import { caseStudies } from '@/app/data/caseStudies';
 
 export const metadata = {
-  title: 'Success Stories | SiteGrow India',
+  title: 'Success Stories | Servestack',
   description: 'Case studies from cafes, restaurants, and hotels that grew with better websites.',
 };
 

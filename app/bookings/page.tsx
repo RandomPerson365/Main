@@ -5,7 +5,7 @@ import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 
 export const metadata = {
-  title: 'Reservation & Booking System | SiteGrow India',
+  title: 'Reservation & Booking System | Servestack',
   description: 'Table reservations and room booking systems for hospitality businesses.',
 };
 

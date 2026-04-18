@@ -5,7 +5,7 @@ import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 
 export const metadata = {
-  title: 'Professional Websites | SiteGrow India',
+  title: 'Professional Websites | Servestack',
   description: 'Professional website service for cafes, restaurants, and hotels.',
 };
 
