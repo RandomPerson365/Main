@@ -37,7 +37,7 @@ export function Footer() {
           <div>
             <h4 className="font-semibold text-foreground mb-3">Get in touch</h4>
             <div className="space-y-2 text-sm text-muted-foreground">
-              <p>hello@servestack.in</p>
+              <p>Akshay12345Singh@gmail.com</p>
               <p>+91 98765 43210</p>
               <p>Bengaluru, India</p>
             </div>

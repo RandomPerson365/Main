@@ -53,7 +53,7 @@ export default function ContactPage() {
                   <Mail size={18} className="text-primary mr-3 mt-0.5" />
                   <div>
                     <p className="font-medium text-foreground">Email</p>
-                    <p className="text-muted-foreground">hello@servestack.in</p>
+                    <p className="text-muted-foreground">Akshay12345Singh@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -83,7 +83,7 @@ export default function ContactPage() {
               </ol>
               <div className="mt-8 flex flex-col sm:flex-row gap-3">
                 <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                  <Link href="mailto:hello@servestack.in">Email us now</Link>
+                  <Link href="mailto:Akshay12345Singh@gmail.com">Email us now</Link>
                 </Button>
                 <Button asChild variant="outline">
                   <Link href="/pricing">View pricing plans</Link>
