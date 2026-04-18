@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const study = getCaseStudyById(id);
 
   return {
-    title: `${study?.title ?? 'Success Story'} | SiteGrow India`,
+    title: `${study?.title ?? 'Success Story'} | Servestack`,
     description: study?.description ?? 'Hospitality business growth story',
   };
 }

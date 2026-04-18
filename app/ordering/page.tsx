@@ -5,7 +5,7 @@ import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 
 export const metadata = {
-  title: 'Online Ordering System | SiteGrow India',
+  title: 'Online Ordering System | Servestack',
   description: 'Direct online ordering setup for cafes and restaurants.',
 };
 
