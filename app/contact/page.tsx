@@ -29,7 +29,7 @@ export default function ContactPage() {
     <main className="min-h-screen bg-background">
       <Navbar />
 
-      <section className="py-20 sm:py-24">
+      <section className="section-reveal py-20 sm:py-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">Let’s discuss your business goals</h1>
@@ -39,14 +39,16 @@ export default function ContactPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="rounded-xl border border-border bg-card p-8">
+            <div className="card-lift rounded-xl border border-border bg-card p-8">
               <h2 className="text-2xl font-semibold text-foreground mb-4">Quick contact options</h2>
               <div className="space-y-4 text-sm">
                 <div className="flex items-start">
                   <Phone size={18} className="text-primary mr-3 mt-0.5" />
                   <div>
                     <p className="font-medium text-foreground">Call us</p>
-                    <p className="text-muted-foreground">+91 9545244572</p>
+                    <Link href="tel:+919545244572" className="text-muted-foreground hover:text-foreground transition-colors">
+                      +91 9545244572
+                    </Link>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -60,7 +62,14 @@ export default function ContactPage() {
                   <MessageCircle size={18} className="text-primary mr-3 mt-0.5" />
                   <div>
                     <p className="font-medium text-foreground">WhatsApp</p>
-                    <p className="text-muted-foreground">Message us for a faster response</p>
+                    <Link
+                      href="https://wa.me/919545244572"
+                      className="text-muted-foreground hover:text-foreground transition-colors"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Message us on +91 9545244572
+                    </Link>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -73,7 +82,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="rounded-xl border border-border bg-card p-8">
+            <div className="card-lift section-reveal section-delay-1 rounded-xl border border-border bg-card p-8">
               <h2 className="text-2xl font-semibold text-foreground mb-4">What happens next?</h2>
               <ol className="space-y-4 text-sm text-foreground list-decimal list-inside">
                 <li>15-minute discovery call to understand your business.</li>
@@ -82,10 +91,10 @@ export default function ContactPage() {
                 <li>We build, launch, and support your website.</li>
               </ol>
               <div className="mt-8 flex flex-col sm:flex-row gap-3">
-                <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground transition-transform hover:-translate-y-0.5">
                   <Link href="mailto:Akshay12345Singh@gmail.com">Email us now</Link>
                 </Button>
-                <Button asChild variant="outline">
+                <Button asChild variant="outline" className="transition-transform hover:-translate-y-0.5">
                   <Link href="/pricing">View pricing plans</Link>
                 </Button>
               </div>
@@ -94,12 +103,12 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-muted/30">
+      <section className="section-reveal section-delay-2 py-16 bg-muted/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-6 text-center">Common questions from owners</h2>
           <div className="space-y-4">
             {faqs.map((item) => (
-              <div key={item.q} className="rounded-lg border border-border bg-card p-5">
+                <div key={item.q} className="card-lift rounded-lg border border-border bg-card p-5">
                 <h3 className="font-semibold text-foreground mb-2">{item.q}</h3>
                 <p className="text-sm text-muted-foreground">{item.a}</p>
               </div>
