@@ -146,7 +146,6 @@ html {
     width: 140%;
     height: 1px;
     background: linear-gradient(90deg, transparent, rgb(99 102 241 / 0.55), transparent);
-    background: linear-gradient(90deg, transparent, color-mix(in oklch, var(--primary) 70%, transparent), transparent);
     animation: divider-slide 8s linear infinite;
     opacity: 0.7;
     z-index: 0;
@@ -213,6 +212,10 @@ html {
     .card-lift:hover,
     .card-lift:focus-within {
       box-shadow: 0 14px 30px -18px color-mix(in oklch, var(--foreground) 35%, transparent);
+    }
+
+    .section-divider::before {
+      background: linear-gradient(90deg, transparent, color-mix(in oklch, var(--primary) 70%, transparent), transparent);
     }
   }
 }
