@@ -83,7 +83,7 @@ export default function Home() {
     <main className="min-h-screen bg-background selection:bg-primary/20 selection:text-foreground">
       <Navbar />
 
-      <section className="pt-24 pb-20">
+      <section className="section-reveal pt-24 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="inline-block text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full mb-6">
             Trusted by cafes, restaurants, and hotels across India
@@ -107,7 +107,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-muted/30">
+      <section className="section-reveal section-delay-1 py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-3">What you get</h2>
@@ -131,7 +131,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20" id="success-stories">
+      <section className="section-reveal section-delay-2 py-20" id="success-stories">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
             <div>
@@ -151,7 +151,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-muted/30">
+      <section className="section-reveal section-delay-3 py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-3">Why choose us</h2>
@@ -163,7 +163,7 @@ export default function Home() {
               'You get clear pricing and practical recommendations',
               'Local market understanding for Indian hospitality buyers',
             ].map((point) => (
-              <div key={point} className="rounded-lg border border-border bg-card p-5 flex items-start">
+               <div key={point} className="card-lift rounded-lg border border-border bg-card p-5 flex items-start">
                 <CheckCircle size={18} className="text-primary mr-3 mt-1" />
                 <p className="text-foreground">{point}</p>
               </div>
@@ -172,14 +172,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="section-reveal section-delay-4 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-3">What business owners say</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {testimonials.map((item) => (
-              <div key={item.author} className="rounded-lg border border-border bg-card p-6">
+              <div key={item.author} className="card-lift rounded-lg border border-border bg-card p-6">
                 <p className="text-foreground mb-4">&ldquo;{item.quote}&rdquo;</p>
                 <p className="text-sm font-semibold text-foreground">{item.author}</p>
                 <p className="text-sm text-muted-foreground">{item.role}</p>
@@ -189,7 +189,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="section-reveal section-delay-5 py-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-3">Frequently asked questions</h2>
@@ -197,7 +197,7 @@ export default function Home() {
 
           <div className="space-y-4">
             {faqs.map((item) => (
-              <div key={item.q} className="rounded-lg border border-border bg-card p-5">
+              <div key={item.q} className="card-lift rounded-lg border border-border bg-card p-5">
                 <h3 className="font-semibold text-foreground mb-2">{item.q}</h3>
                 <p className="text-muted-foreground text-sm">{item.a}</p>
               </div>
@@ -206,7 +206,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-primary text-primary-foreground">
+      <section className="section-reveal section-delay-6 py-20 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ready to grow your business online?</h2>
           <p className="mb-8 text-primary-foreground/90">
