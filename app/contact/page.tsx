@@ -47,7 +47,7 @@ export default function ContactPage() {
                   <div>
                     <p className="font-medium text-foreground">Call us</p>
                     <Link
-                      href="tel:+919545244572"
+                      href="tel:+91-9545244572"
                       className="text-muted-foreground hover:text-foreground transition-colors"
                       aria-label="Call us at +91 9545244572"
                     >
