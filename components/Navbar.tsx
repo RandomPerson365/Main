@@ -5,71 +5,62 @@ import { useEffect, useState } from 'react';
 import { Menu, Palette, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const PALETTES: ReadonlyArray<Record<string, string>> = [
-  {
-    '--background': 'oklch(0.16 0.02 250)',
-    '--foreground': 'oklch(0.95 0.01 95)',
-    '--card': 'oklch(0.2 0.028 250)',
-    '--card-foreground': 'oklch(0.95 0.01 95)',
-    '--popover': 'oklch(0.2 0.028 250)',
-    '--popover-foreground': 'oklch(0.95 0.01 95)',
-    '--primary': 'oklch(0.78 0.16 95)',
-    '--primary-foreground': 'oklch(0.15 0.02 250)',
-    '--secondary': 'oklch(0.68 0.14 165)',
-    '--secondary-foreground': 'oklch(0.14 0.018 250)',
-    '--muted': 'oklch(0.24 0.03 250)',
-    '--muted-foreground': 'oklch(0.8 0.02 95)',
-    '--accent': 'oklch(0.72 0.17 25)',
-    '--accent-foreground': 'oklch(0.14 0.018 250)',
-    '--destructive': 'oklch(0.62 0.22 25)',
-    '--destructive-foreground': 'oklch(0.95 0.01 95)',
-    '--border': 'oklch(0.3 0.03 250)',
-    '--input': 'oklch(0.22 0.03 250)',
-    '--ring': 'oklch(0.78 0.16 95)',
-  },
-  {
-    '--background': 'oklch(0.14 0.025 300)',
-    '--foreground': 'oklch(0.95 0.01 210)',
-    '--card': 'oklch(0.18 0.03 300)',
-    '--card-foreground': 'oklch(0.95 0.01 210)',
-    '--popover': 'oklch(0.18 0.03 300)',
-    '--popover-foreground': 'oklch(0.95 0.01 210)',
-    '--primary': 'oklch(0.74 0.2 330)',
-    '--primary-foreground': 'oklch(0.14 0.025 300)',
-    '--secondary': 'oklch(0.69 0.16 220)',
-    '--secondary-foreground': 'oklch(0.13 0.02 300)',
-    '--muted': 'oklch(0.22 0.03 300)',
-    '--muted-foreground': 'oklch(0.78 0.02 210)',
-    '--accent': 'oklch(0.72 0.17 160)',
-    '--accent-foreground': 'oklch(0.13 0.02 300)',
-    '--destructive': 'oklch(0.62 0.22 18)',
-    '--destructive-foreground': 'oklch(0.95 0.01 210)',
-    '--border': 'oklch(0.28 0.03 300)',
-    '--input': 'oklch(0.2 0.03 300)',
-    '--ring': 'oklch(0.74 0.2 330)',
-  },
-  {
-    '--background': 'oklch(0.15 0.02 210)',
-    '--foreground': 'oklch(0.95 0.008 280)',
-    '--card': 'oklch(0.2 0.025 210)',
-    '--card-foreground': 'oklch(0.95 0.008 280)',
-    '--popover': 'oklch(0.2 0.025 210)',
-    '--popover-foreground': 'oklch(0.95 0.008 280)',
-    '--primary': 'oklch(0.76 0.17 205)',
-    '--primary-foreground': 'oklch(0.12 0.018 210)',
-    '--secondary': 'oklch(0.68 0.18 285)',
-    '--secondary-foreground': 'oklch(0.12 0.018 210)',
-    '--muted': 'oklch(0.24 0.03 210)',
-    '--muted-foreground': 'oklch(0.8 0.02 280)',
-    '--accent': 'oklch(0.73 0.16 120)',
-    '--accent-foreground': 'oklch(0.12 0.018 210)',
-    '--destructive': 'oklch(0.62 0.21 15)',
-    '--destructive-foreground': 'oklch(0.95 0.008 280)',
-    '--border': 'oklch(0.3 0.03 210)',
-    '--input': 'oklch(0.22 0.03 210)',
-    '--ring': 'oklch(0.76 0.17 205)',
-  },
-];
+const PALETTE_VARIABLE_NAMES = [
+  '--background',
+  '--foreground',
+  '--card',
+  '--card-foreground',
+  '--popover',
+  '--popover-foreground',
+  '--primary',
+  '--primary-foreground',
+  '--secondary',
+  '--secondary-foreground',
+  '--muted',
+  '--muted-foreground',
+  '--accent',
+  '--accent-foreground',
+  '--destructive',
+  '--destructive-foreground',
+  '--border',
+  '--input',
+  '--ring',
+] as const;
+
+const randomBetween = (min: number, max: number) => Math.random() * (max - min) + min;
+
+const wrapHue = (hue: number) => ((hue % 360) + 360) % 360;
+
+const oklch = (l: number, c: number, h: number) => `oklch(${l.toFixed(3)} ${c.toFixed(3)} ${wrapHue(h).toFixed(1)})`;
+
+const createRandomPalette = () => {
+  const baseHue = randomBetween(0, 360);
+  const secondaryHue = baseHue + randomBetween(50, 160);
+  const accentHue = baseHue + randomBetween(170, 290);
+  const destructiveHue = baseHue + randomBetween(300, 350);
+
+  return {
+    '--background': oklch(randomBetween(0.13, 0.18), randomBetween(0.018, 0.035), baseHue + randomBetween(-20, 20)),
+    '--foreground': oklch(randomBetween(0.92, 0.97), randomBetween(0.006, 0.018), baseHue + randomBetween(120, 250)),
+    '--card': oklch(randomBetween(0.17, 0.22), randomBetween(0.022, 0.04), baseHue + randomBetween(-15, 15)),
+    '--card-foreground': oklch(randomBetween(0.92, 0.97), randomBetween(0.006, 0.018), baseHue + randomBetween(120, 250)),
+    '--popover': oklch(randomBetween(0.17, 0.22), randomBetween(0.022, 0.04), baseHue + randomBetween(-15, 15)),
+    '--popover-foreground': oklch(randomBetween(0.92, 0.97), randomBetween(0.006, 0.018), baseHue + randomBetween(120, 250)),
+    '--primary': oklch(randomBetween(0.7, 0.8), randomBetween(0.13, 0.23), baseHue),
+    '--primary-foreground': oklch(randomBetween(0.11, 0.17), randomBetween(0.01, 0.03), baseHue + randomBetween(-30, 30)),
+    '--secondary': oklch(randomBetween(0.64, 0.76), randomBetween(0.12, 0.22), secondaryHue),
+    '--secondary-foreground': oklch(randomBetween(0.11, 0.16), randomBetween(0.01, 0.03), secondaryHue + randomBetween(-25, 25)),
+    '--muted': oklch(randomBetween(0.2, 0.28), randomBetween(0.02, 0.05), baseHue + randomBetween(-30, 30)),
+    '--muted-foreground': oklch(randomBetween(0.74, 0.84), randomBetween(0.012, 0.03), secondaryHue + randomBetween(-20, 20)),
+    '--accent': oklch(randomBetween(0.68, 0.78), randomBetween(0.12, 0.23), accentHue),
+    '--accent-foreground': oklch(randomBetween(0.11, 0.17), randomBetween(0.01, 0.03), accentHue + randomBetween(-30, 30)),
+    '--destructive': oklch(randomBetween(0.58, 0.67), randomBetween(0.18, 0.25), destructiveHue),
+    '--destructive-foreground': oklch(randomBetween(0.92, 0.97), randomBetween(0.006, 0.018), destructiveHue + randomBetween(120, 220)),
+    '--border': oklch(randomBetween(0.26, 0.34), randomBetween(0.02, 0.05), baseHue + randomBetween(-25, 25)),
+    '--input': oklch(randomBetween(0.2, 0.26), randomBetween(0.02, 0.05), baseHue + randomBetween(-25, 25)),
+    '--ring': oklch(randomBetween(0.68, 0.8), randomBetween(0.13, 0.24), baseHue + randomBetween(-20, 20)),
+  } satisfies Record<string, string>;
+};
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -89,21 +80,14 @@ export function Navbar() {
     }
 
     const root = document.documentElement;
-    const paletteIndex = root.dataset.paletteIndex ? Number(root.dataset.paletteIndex) : NaN;
-    const currentPalette = Number.isInteger(paletteIndex) && paletteIndex >= 0 && paletteIndex < PALETTES.length
-      ? PALETTES[paletteIndex]
-      : undefined;
-    const variableNames = currentPalette ? Object.keys(currentPalette) : Object.keys(PALETTES[0]);
-
-    for (const variableName of variableNames) {
+    for (const variableName of PALETTE_VARIABLE_NAMES) {
       root.style.removeProperty(variableName);
     }
 
     delete root.dataset.paletteMode;
-    delete root.dataset.paletteIndex;
   };
 
-  const applyPalette = (palette: Record<string, string>, paletteIndex: number) => {
+  const applyPalette = (palette: Record<string, string>) => {
     if (typeof document === 'undefined') {
       return;
     }
@@ -115,22 +99,20 @@ export function Navbar() {
     }
 
     root.dataset.paletteMode = 'random';
-    root.dataset.paletteIndex = String(paletteIndex);
   };
 
-  const togglePalette = () => {
+  const setPaletteMode = (mode: 'original' | 'random') => {
     if (typeof document === 'undefined') {
       return;
     }
 
-    if (isRandomPaletteEnabled) {
+    if (mode === 'original') {
       clearPalette();
       setIsRandomPaletteEnabled(false);
       return;
     }
 
-    const paletteIndex = Math.floor(Math.random() * PALETTES.length);
-    applyPalette(PALETTES[paletteIndex], paletteIndex);
+    applyPalette(createRandomPalette());
     setIsRandomPaletteEnabled(true);
   };
 
@@ -170,15 +152,36 @@ export function Navbar() {
               variant="outline"
               size="icon-sm"
               className="sm:hidden"
-              onClick={togglePalette}
+              onClick={() => setPaletteMode(isRandomPaletteEnabled ? 'original' : 'random')}
               aria-label={isRandomPaletteEnabled ? 'Switch to original theme' : 'Switch to random palette'}
             >
               <Palette className="size-4" />
             </Button>
 
-            <Button type="button" variant="outline" size="sm" className="hidden sm:inline-flex" onClick={togglePalette}>
-              {isRandomPaletteEnabled ? 'Original Theme' : 'Random Palette'}
-            </Button>
+            <div
+              className="hidden sm:inline-flex rounded-md border border-border overflow-hidden"
+              role="group"
+              aria-label="Theme mode toggle"
+            >
+              <Button
+                type="button"
+                variant={isRandomPaletteEnabled ? 'ghost' : 'secondary'}
+                size="sm"
+                className="rounded-none border-0"
+                onClick={() => setPaletteMode('original')}
+              >
+                Original
+              </Button>
+              <Button
+                type="button"
+                variant={isRandomPaletteEnabled ? 'secondary' : 'ghost'}
+                size="sm"
+                className="rounded-none border-0"
+                onClick={() => setPaletteMode('random')}
+              >
+                Random
+              </Button>
+            </div>
 
             <Button asChild className="hidden sm:inline-flex bg-primary hover:bg-primary/90 text-primary-foreground">
               <Link href="/contact">Get Started Now</Link>
