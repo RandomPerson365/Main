@@ -76,12 +76,23 @@ export function Navbar() {
   const [isRandomPaletteEnabled, setIsRandomPaletteEnabled] = useState(false);
 
   useEffect(() => {
+    if (typeof document === 'undefined') {
+      return;
+    }
+
     setIsRandomPaletteEnabled(document.documentElement.dataset.paletteMode === 'random');
   }, []);
 
   const clearPalette = () => {
+    if (typeof document === 'undefined') {
+      return;
+    }
+
     const root = document.documentElement;
-    const currentPalette = root.dataset.paletteIndex ? PALETTES[Number(root.dataset.paletteIndex)] : undefined;
+    const paletteIndex = root.dataset.paletteIndex ? Number(root.dataset.paletteIndex) : NaN;
+    const currentPalette = Number.isInteger(paletteIndex) && paletteIndex >= 0 && paletteIndex < PALETTES.length
+      ? PALETTES[paletteIndex]
+      : undefined;
     const variableNames = currentPalette ? Object.keys(currentPalette) : Object.keys(PALETTES[0]);
 
     for (const variableName of variableNames) {
@@ -93,6 +104,10 @@ export function Navbar() {
   };
 
   const applyPalette = (palette: Record<string, string>, paletteIndex: number) => {
+    if (typeof document === 'undefined') {
+      return;
+    }
+
     const root = document.documentElement;
 
     for (const [variableName, value] of Object.entries(palette)) {
@@ -104,6 +119,10 @@ export function Navbar() {
   };
 
   const togglePalette = () => {
+    if (typeof document === 'undefined') {
+      return;
+    }
+
     if (isRandomPaletteEnabled) {
       clearPalette();
       setIsRandomPaletteEnabled(false);
@@ -154,7 +173,7 @@ export function Navbar() {
               onClick={togglePalette}
               aria-label={isRandomPaletteEnabled ? 'Switch to original theme' : 'Switch to random palette'}
             >
-              <Palette />
+              <Palette className="size-4" />
             </Button>
 
             <Button type="button" variant="outline" size="sm" className="hidden sm:inline-flex" onClick={togglePalette}>
