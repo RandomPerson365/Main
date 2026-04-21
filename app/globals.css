@@ -198,6 +198,45 @@ html {
     filter: blur(0.4px);
   }
 
+  .star-burst {
+    position: fixed;
+    width: 0;
+    height: 0;
+    transform-style: preserve-3d;
+    perspective: 900px;
+    will-change: transform;
+  }
+
+  .star-particle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--star-size);
+    height: var(--star-size);
+    margin-left: calc(var(--star-size) * -0.5);
+    margin-top: calc(var(--star-size) * -0.5);
+    clip-path: polygon(50% 0, 61% 35%, 99% 35%, 69% 57%, 79% 91%, 50% 70%, 21% 91%, 31% 57%, 1% 35%, 39% 35%);
+    background: var(--star-color);
+    box-shadow: 0 0 16px color-mix(in oklch, var(--star-color) 72%, transparent);
+    transform-style: preserve-3d;
+    opacity: 0;
+    will-change: transform, opacity;
+    animation: star-burst-flight var(--star-duration) cubic-bezier(0.18, 0.75, 0.25, 1) forwards;
+    animation-delay: var(--star-delay);
+  }
+
+  .star-particle-v1 {
+    filter: saturate(1.1) brightness(1.06);
+  }
+
+  .star-particle-v2 {
+    filter: drop-shadow(0 0 8px color-mix(in oklch, var(--secondary) 58%, transparent));
+  }
+
+  .star-particle-v3 {
+    filter: blur(0.1px) brightness(1.12);
+  }
+
   .custom-cursor-enabled,
   .custom-cursor-enabled a,
   .custom-cursor-enabled button,
@@ -252,6 +291,23 @@ html {
   }
 }
 
+@keyframes star-burst-flight {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) scale(var(--star-scale-from)) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+
+  12% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(var(--star-x), var(--star-y), var(--star-z)) scale(var(--star-scale-to)) rotateX(var(--star-rx))
+      rotateY(var(--star-ry)) rotateZ(var(--star-rz));
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .section-reveal {
     animation: none;
@@ -270,5 +326,10 @@ html {
   .section-divider::before,
   .section-divider::after {
     animation: none;
+  }
+
+  .star-particle {
+    animation: none;
+    opacity: 0;
   }
 }
