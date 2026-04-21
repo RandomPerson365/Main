@@ -3,6 +3,9 @@ import { Analytics } from '@vercel/analytics/next';
 import './globals.css';
 import { CursorTrail } from '@/components/CursorTrail';
 
+import { PageTransition } from '@/components/PageTransition';
+import { BackgroundParticles } from '@/components/BackgroundParticles';
+
 export const metadata: Metadata = {
   title: 'Servestack | Websites for Cafes & Hotels',
   description:
@@ -22,9 +25,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark bg-background">
-      <body className="font-sans antialiased">
+      <body className="font-sans antialiased relative">
+        <BackgroundParticles />
         <CursorTrail />
-        {children}
+        <PageTransition>{children}</PageTransition>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

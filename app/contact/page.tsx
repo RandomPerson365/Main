@@ -3,6 +3,8 @@ import { Phone, Mail, MessageCircle, Clock } from 'lucide-react';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
+import { ContactFormWizard } from '@/components/ContactFormWizard';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 export const metadata = {
   title: 'Contact | Servestack',
@@ -86,24 +88,7 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
-
-            <div className="card-lift section-reveal section-delay-1 rounded-xl border border-border bg-card p-8">
-              <h2 className="text-2xl font-semibold text-foreground mb-4">What happens next?</h2>
-              <ol className="space-y-4 text-sm text-foreground list-decimal list-inside">
-                <li>15-minute discovery call to understand your business.</li>
-                <li>We recommend the right package and timeline.</li>
-                <li>You approve content and design direction.</li>
-                <li>We build, launch, and support your website.</li>
-              </ol>
-              <div className="mt-8 flex flex-col sm:flex-row gap-3">
-                <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground transition-transform hover:-translate-y-0.5">
-                  <Link href="mailto:Akshay12345Singh@gmail.com">Email us now</Link>
-                </Button>
-                <Button asChild variant="outline" className="transition-transform hover:-translate-y-0.5">
-                  <Link href="/pricing">View pricing plans</Link>
-                </Button>
-              </div>
-            </div>
+            <ContactFormWizard />
           </div>
         </div>
       </section>
@@ -111,14 +96,16 @@ export default function ContactPage() {
       <section className="section-reveal section-delay-2 py-16 bg-muted/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-6 text-center">Common questions from owners</h2>
-          <div className="space-y-4">
-            {faqs.map((item) => (
-                <div key={item.q} className="card-lift rounded-lg border border-border bg-card p-5">
-                <h3 className="font-semibold text-foreground mb-2">{item.q}</h3>
-                <p className="text-sm text-muted-foreground">{item.a}</p>
-              </div>
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            {faqs.map((item, index) => (
+              <AccordionItem key={item.q} value={`item-${index}`} className="card-lift rounded-lg border border-border bg-card px-5 border-b-current">
+                <AccordionTrigger className="text-foreground hover:no-underline py-5">{item.q}</AccordionTrigger>
+                <AccordionContent className="text-sm text-muted-foreground pb-5">
+                  {item.a}
+                </AccordionContent>
+              </AccordionItem>
             ))}
-          </div>
+          </Accordion>
         </div>
       </section>
 

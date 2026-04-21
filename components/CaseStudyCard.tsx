@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import { InteractiveCardWrapper } from '@/components/InteractiveCardWrapper';
 
 interface CaseStudyCardProps {
   id: string;
@@ -17,7 +18,7 @@ export function CaseStudyCard({ id, title, category, description, result, image,
       href={`/portfolio/${id}`}
       className="group block h-full rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
     >
-      <article className="card-lift h-full rounded-xl border border-border bg-card p-6 hover:border-primary/40 transition-colors">
+      <InteractiveCardWrapper className="card-lift h-full rounded-xl border border-border bg-card p-6 hover:border-primary/40 transition-colors">
         <div className="flex items-center justify-between mb-4">
           <span className="text-3xl transition-transform duration-200 group-hover:scale-110" aria-hidden="true">
             {image}
@@ -41,7 +42,7 @@ export function CaseStudyCard({ id, title, category, description, result, image,
         <span className="inline-flex items-center text-sm font-semibold text-primary">
           Read full story <ArrowRight size={16} className="ml-1 transition-transform duration-200 group-hover:translate-x-1" />
         </span>
-      </article>
+      </InteractiveCardWrapper>
     </Link>
   );
 }

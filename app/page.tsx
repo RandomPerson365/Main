@@ -6,31 +6,35 @@ import { Footer } from '@/components/Footer';
 import { ServiceCard } from '@/components/ServiceCard';
 import { CaseStudyCard } from '@/components/CaseStudyCard';
 import { caseStudies } from '@/app/data/caseStudies';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+
+import { Scene3D } from '@/components/Scene3D';
+import { Floating3DIcon } from '@/components/Floating3DIcon';
 
 const services = [
   {
-    icon: <Globe size={22} />,
+    icon: <Floating3DIcon type="sphere" />,
     title: 'Professional Website',
     description: 'A clean, mobile-first website that shows your menu, rooms, photos, and contact details clearly.',
     href: '/websites',
     features: ['Mobile friendly', 'Fast loading pages', 'Menu/room showcase', 'Google Maps & WhatsApp integration'],
   },
   {
-    icon: <ShoppingBag size={22} />,
+    icon: <Floating3DIcon type="box" />,
     title: 'Online Ordering',
     description: 'Let customers place food orders directly from your website without app dependence.',
     href: '/ordering',
     features: ['Direct order flow', 'Pickup & delivery options', 'Order notifications', 'Payment links'],
   },
   {
-    icon: <CalendarDays size={22} />,
+    icon: <Floating3DIcon type="dodecahedron" />,
     title: 'Booking System',
     description: 'Accept room or table bookings online and reduce missed calls and double entries.',
     href: '/bookings',
     features: ['Live booking form', 'Auto confirmations', 'Reminder messages', 'Simple booking calendar'],
   },
   {
-    icon: <Headset size={22} />,
+    icon: <Floating3DIcon type="torus" />,
     title: 'Support & Maintenance',
     description: 'We keep your website updated and available so you can focus on your customers.',
     href: '/support',
@@ -80,21 +84,23 @@ const testimonials = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background selection:bg-primary/20 selection:text-foreground">
+    <main className="min-h-screen bg-background selection:bg-primary/20 selection:text-foreground overflow-x-hidden">
       <Navbar />
 
-      <section className="section-reveal pt-24 pb-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="inline-block text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full mb-6">
+      <section className="section-reveal pt-24 pb-20 relative min-h-[85vh] flex items-center justify-center">
+        <Scene3D />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 pointer-events-none">
+          <p className="inline-block text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full mb-6 backdrop-blur-md">
             Trusted by cafes, restaurants, and hotels across India
           </p>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance">
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-foreground mb-6 text-balance drop-shadow-sm">
             More Bookings. More Orders. <br className="hidden sm:block" /> Better Online Presence.
           </h1>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8 text-balance">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8 text-balance bg-background/60 backdrop-blur-md rounded-lg p-3 inline-block">
             We build simple, high-converting websites for hospitality businesses so customers can find you, trust you, and buy from you.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pointer-events-auto">
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
               <Link href="/contact" className="flex items-center">
                 Get Started Now <ArrowRight size={18} className="ml-2" />
@@ -195,14 +201,16 @@ export default function Home() {
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-3">Frequently asked questions</h2>
           </div>
 
-          <div className="space-y-4">
-            {faqs.map((item) => (
-              <div key={item.q} className="card-lift rounded-lg border border-border bg-card p-5">
-                <h3 className="font-semibold text-foreground mb-2">{item.q}</h3>
-                <p className="text-muted-foreground text-sm">{item.a}</p>
-              </div>
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            {faqs.map((item, index) => (
+              <AccordionItem key={item.q} value={`item-${index}`} className="card-lift rounded-lg border border-border bg-card px-5 border-b-current">
+                <AccordionTrigger className="text-foreground hover:no-underline py-5 text-left">{item.q}</AccordionTrigger>
+                <AccordionContent className="text-sm text-muted-foreground pb-5">
+                  {item.a}
+                </AccordionContent>
+              </AccordionItem>
             ))}
-          </div>
+          </Accordion>
         </div>
       </section>
 
