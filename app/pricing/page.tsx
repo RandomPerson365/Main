@@ -2,7 +2,7 @@
   <h2>Pricing Plans</h2>
   <div>
     <h3>Growth Plan</h3>
-    <p>Price: ₹55,000</p>
+    <p>Price: ₹40,000</p>
     <ul>
       <li>Features:</li>
       <li>Feature A</li>
