@@ -83,12 +83,12 @@ export default function ServicesPage() {
             {[
               {
                 name: 'Starter',
-                price: '₹12,000',
+                price: '₹15,000',
                 details: 'Website setup for new cafes and small properties',
               },
               {
                 name: 'Growth',
-                price: '₹40,000',
+                price: '₹35,000',
                 details: 'Website + ordering or booking tools for active businesses',
               },
               {
